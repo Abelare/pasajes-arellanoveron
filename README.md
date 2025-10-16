@@ -1,6 +1,5 @@
-/pasajes-arellanoveron/
-├── index.html
-├── style.css
-├── script.js
-├── /img/
-└── README.md
+<!-- Enlazar CSS -->
+<link rel="stylesheet" href="css/style.css">
+
+<!-- Enlazar JS -->
+<script src="js/script.js" defer></script>
