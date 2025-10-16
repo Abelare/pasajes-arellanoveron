@@ -1,8 +1,10 @@
+// script.js
+
 document.addEventListener("DOMContentLoaded", () => {
   const formulario = document.getElementById("formulario");
   const resultados = document.getElementById("resultados");
 
-  formulario.addEventListener("submit", (e) => {
+  formulario.addEventListener("submit", function (e) {
     e.preventDefault();
 
     const origen = document.getElementById("origen").value.trim();
@@ -11,40 +13,36 @@ document.addEventListener("DOMContentLoaded", () => {
     const tipo = document.getElementById("tipo").value;
 
     if (!origen || !destino || !fecha || !tipo) {
-      resultados.innerHTML = "<p>Por favor, completa todos los campos.</p>";
+      resultados.innerHTML = `<p style="color:red;">Por favor, completa todos los campos.</p>`;
       return;
     }
 
+    // Simulación de resultados
     const opciones = {
       avion: [
-        { nombre: "Compañía Económica", precio: "29.99€" },
-        { nombre: "Compañía Express", precio: "34.50€" },
-        { nombre: "Compañía Flex", precio: "39.00€" }
+        { empresa: "Ryanair", precio: "29.99€" },
+        { empresa: "Vueling", precio: "34.50€" },
+        { empresa: "EasyJet", precio: "39.00€" }
       ],
       tren: [
-        { nombre: "Tren Regional", precio: "19.90€" },
-        { nombre: "Tren Rápido", precio: "24.75€" },
-        { nombre: "Tren Premium", precio: "31.00€" }
+        { empresa: "Renfe", precio: "19.99€" },
+        { empresa: "Ouigo", precio: "22.50€" },
+        { empresa: "Iryo", precio: "25.00€" }
       ],
       bus: [
-        { nombre: "Bus Local", precio: "14.50€" },
-        { nombre: "Bus Directo", precio: "18.00€" },
-        { nombre: "Bus Confort", precio: "22.30€" }
+        { empresa: "Alsa", precio: "14.99€" },
+        { empresa: "FlixBus", precio: "16.50€" },
+        { empresa: "BlaBlaBus", precio: "18.00€" }
       ]
     };
 
-    const resultadosHTML = opciones[tipo].map(opcion => `
-      <div class="card">
-        <h3>${opcion.nombre}</h3>
-        <p>Precio: ${opcion.precio}</p>
-        <p>Ruta: ${origen} → ${destino}</p>
-        <p>Fecha: ${fecha}</p>
-      </div>
-    `).join("");
+    const resultadosHTML = opciones[tipo]
+      .map(opcion => `<li>${opcion.empresa} – ${opcion.precio}</li>`)
+      .join("");
 
     resultados.innerHTML = `
-      <h2>Resultados para ${tipo.charAt(0).toUpperCase() + tipo.slice(1)}</h2>
-      ${resultadosHTML}
+      <h2>Resultados para ${tipo} de ${origen} a ${destino} el ${fecha}</h2>
+      <ul>${resultadosHTML}</ul>
     `;
   });
 });
