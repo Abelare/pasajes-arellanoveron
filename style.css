@@ -1,3 +1,4 @@
+/* Estilo general */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -6,6 +7,7 @@ body {
   color: #333;
 }
 
+/* Encabezado */
 header {
   background: #0072bb;
   color: white;
@@ -13,20 +15,63 @@ header {
   text-align: center;
 }
 
+/* Logo más grande y centrado */
+header img {
+  max-width: 300px;
+  height: auto;
+  display: block;
+  margin: 0 auto 1rem auto;
+}
+
+/* Buscador */
 .buscador {
   padding: 2rem;
   text-align: center;
 }
 
-form input, form select, form button {
+form input,
+form select,
+form button {
   margin: 0.5rem;
   padding: 0.7rem;
   font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
+/* Botón con estilo */
+form button {
+  background-color: #0072bb;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #005fa3;
+}
+
+/* Resultados */
 #resultados {
   padding: 2rem;
   max-width: 600px;
   margin: auto;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+#resultados h2 {
+  color: #0072bb;
+}
+
+#resultados ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#resultados li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #ddd;
+}
