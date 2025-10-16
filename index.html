@@ -13,12 +13,19 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <img src="img/logo.png.png" alt="Logo Arellanoveron" style="max-width: 300px; display: block; margin: auto;">
-    <h1>Pasajes Arellanoveron</h1>
-    <p>Encuentra pasajes económicos de avión, tren y autobús</p>
+  <!-- Branding principal -->
+  <header class="branding">
+    <img src="img/logo.png" alt="Logo Arellano Travel" class="logo">
+    <h1>Arellano Travel</h1>
   </header>
 
+  <!-- Título del servicio -->
+  <section class="titulo-servicio">
+    <h2>Pasajes Arellanoveron</h2>
+    <p>Encuentra pasajes económicos de avión, tren y autobús desde Madrid</p>
+  </section>
+
+  <!-- Buscador -->
   <section class="buscador">
     <form id="formulario">
       <input type="text" id="origen" placeholder="Origen" required>
@@ -33,13 +40,17 @@
     </form>
   </section>
 
+  <!-- Resultados -->
   <section id="resultados"></section>
 
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Arellanoveron. Todos los derechos reservados.</p>
+    <p><a href="#">Aviso legal</a> | <a href="#">Política de privacidad</a></p>
   </footer>
 
   <script src="script.js" defer></script>
 </body>
 </html>
+
 
