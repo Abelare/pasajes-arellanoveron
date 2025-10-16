@@ -75,3 +75,34 @@ form button:hover {
   padding: 0.5rem 0;
   border-bottom: 1px solid #ddd;
 }
+/* === Branding principal === */
+.branding {
+  background-color: #0077cc;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.logo {
+  max-width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+/* === Título del servicio === */
+.titulo-servicio {
+  text-align: center;
+  margin: 30px 0 10px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.titulo-servicio h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.titulo-servicio p {
+  font-size: 16px;
+  color: #666;
+}
