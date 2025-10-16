@@ -1,5 +1,37 @@
-<!-- Enlazar CSS -->
-<link rel="stylesheet" href="css/style.css">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Pasajes Arellanoveron</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Pasajes Arellanoveron</h1>
+    <p>Encuentra pasajes económicos de avión, tren y autobús</p>
+  </header>
 
-<!-- Enlazar JS -->
-<script src="js/script.js" defer></script>
+  <section class="buscador">
+    <form id="formulario">
+      <input type="text" id="origen" placeholder="Origen" required>
+      <input type="text" id="destino" placeholder="Destino" required>
+      <input type="date" id="fecha" required>
+      <select id="tipo">
+        <option value="avion">Avión</option>
+        <option value="tren">Tren</option>
+        <option value="bus">Autobús</option>
+      </select>
+      <button type="submit">Buscar</button>
+    </form>
+  </section>
+
+  <section id="resultados"></section>
+
+  <footer>
+    <p>&copy; 2025 Arellanoveron. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
