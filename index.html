@@ -1,43 +1,52 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+document.addEventListener("DOMContentLoaded", () => {
+  const formulario = document.getElementById("formulario");
+  const resultados = document.getElementById("resultados");
 
-  <title>Pasajes Arellanoveron - Viajes económicos desde Madrid</title>
+  formulario.addEventListener("submit", (e) => {
+    e.preventDefault();
 
-  <meta name="description" content="Pasajes Arellanoveron: Encuentra pasajes económicos en avión, tren y autobús desde Madrid.">
-  <meta name="keywords" content="Arellano Travel, pasajes baratos, viajes Madrid Barcelona, tren, avión, bus">
-  <meta name="author" content="Arellanoveron">
+    const origen = document.getElementById("origen").value.trim();
+    const destino = document.getElementById("destino").value.trim();
+    const fecha = document.getElementById("fecha").value;
+    const tipo = document.getElementById("tipo").value;
 
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header>
-    <h1>Pasajes Arellanoveron</h1>
-    <p>Encuentra pasajes económicos de avión, tren y autobús</p>
-  </header>
+    if (!origen || !destino || !fecha || !tipo) {
+      resultados.innerHTML = "<p>Por favor, completa todos los campos.</p>";
+      return;
+    }
 
-  <section class="buscador">
-    <form id="formulario">
-      <input type="text" id="origen" placeholder="Origen" required>
-      <input type="text" id="destino" placeholder="Destino" required>
-      <input type="date" id="fecha" required>
-      <select id="tipo">
-        <option value="avion">Avión</option>
-        <option value="tren">Tren</option>
-        <option value="bus">Autobús</option>
-      </select>
-      <button type="submit">Buscar</button>
-    </form>
-  </section>
+    // Simulación de resultados
+    const opciones = {
+      avion: [
+        { nombre: "Compañía Económica", precio: "29.99€" },
+        { nombre: "Compañía Express", precio: "34.50€" },
+        { nombre: "Compañía Flex", precio: "39.00€" }
+      ],
+      tren: [
+        { nombre: "Tren Regional", precio: "19.90€" },
+        { nombre: "Tren Rápido", precio: "24.75€" },
+        { nombre: "Tren Premium", precio: "31.00€" }
+      ],
+      bus: [
+        { nombre: "Bus Local", precio: "14.50€" },
+        { nombre: "Bus Directo", precio: "18.00€" },
+        { nombre: "Bus Confort", precio: "22.30€" }
+      ]
+    };
 
-  <section id="resultados"></section>
+    const resultadosHTML = opciones[tipo].map(opcion => `
+      <div class="card">
+        <h3>${opcion.nombre}</h3>
+        <p>Precio: ${opcion.precio}</p>
+        <p>Ruta: ${origen} → ${destino}</p>
+        <p>Fecha: ${fecha}</p>
+      </div>
+    `).join("");
 
-  <footer>
-    <p>&copy; 2025 Arellanoveron. Todos los derechos reservados.</p>
-  </footer>
+    resultados.innerHTML = `
+      <h2>Resultados para ${tipo.charAt(0).toUpperCase() + tipo.slice(1)}</h2>
+      ${resultadosHTML}
+    `;
+  });
+});
 
-  <script src="script.js" defer></script>
-</body>
-</html>
