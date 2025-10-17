@@ -1,16 +1,33 @@
-.nav-solo-logo {
+.nav-logo-restaurado {
   display: flex;
-  justify-content: center;
   align-items: center;
-  padding: 20px;
+  justify-content: space-between;
+  padding: 10px 30px;
   background-color: white;
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 
-.logo-grande {
-  width: 120px;
+.nav-logo-restaurado img {
+  width: 52px;
   height: auto;
-  display: block;
+  margin-right: 10px;
+}
+
+.nav-logo-restaurado strong {
+  font-size: 20px;
+  color: #000;
+  margin-right: auto;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--azul);
+  font-weight: 600;
 }
 
 
