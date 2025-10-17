@@ -234,3 +234,64 @@ footer a {
   width: 20px;
   height: 20px;
 }
+:root {
+  --azul: #0077cc;
+  --gris-claro: #f5f8fa;
+  --gris-texto: #555;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background-color: var(--gris-claro);
+  color: #333;
+}
+
+/* Navegación */
+nav {
+  background-color: white;
+  padding: 10px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-logo img {
+  width: 40px;
+  height: auto;
+}
+
+.nav-links a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: var(--azul);
+  font-weight: 600;
+}
+
+/* Hero */
+header {
+  background-color: var(--azul);
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+header h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 18px;
+  color: #e0e0e0;
+}
+
+/* Buscador */
+.b
