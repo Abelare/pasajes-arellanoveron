@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Arellano Travel - Comparador de pasajes</title>
+  <title>Arellano Travel - Comparador de billetes</title>
 
-  <meta name="description" content="Compara pasajes económicos en avión, tren y autobús desde Madrid.">
-  <meta name="keywords" content="Arellano Travel, pasajes baratos, viajes Madrid, tren, avión, bus">
+  <meta name="description" content="Compara billetes económicos en avión, tren y autobús desde Madrid.">
+  <meta name="keywords" content="Arellano Travel, billetes baratos, viajes Madrid, tren, avión, bus">
   <meta name="author" content="Arellano Travel">
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
@@ -16,18 +16,17 @@
   <!-- Branding principal -->
   <header class="branding">
     <img src="img/logo.png" alt="Logo Arellano Travel" class="logo">
-
   </header>
 
   <!-- Título del servicio -->
   <section class="titulo-servicio">
-    <h2>Pasajes Arellanoveron</h2>
-    <p>Encuentra pasajes económicos de avión, tren y autobús desde Madrid</p>
+    <h2>Billetes Arellanoveron</h2>
+    <p>Encuentra billetes económicos de avión, tren y autobús desde Madrid</p>
   </section>
 
   <!-- Buscador -->
   <section class="buscador">
-    <h2>Encuentra tu pasaje ideal</h2>
+    <h2>Encuentra tu billete ideal</h2>
     <form id="formulario">
       <input type="text" id="origen" placeholder="Origen" required>
       <input type="text" id="destino" placeholder="Destino" required>
@@ -59,7 +58,7 @@
   <section class="testimonios">
     <h2>Opiniones de viajeros</h2>
     <div class="card">
-      <p>“Reservé mi pasaje a Valencia en minutos. ¡Muy fácil y barato!”</p>
+      <p>“Reservé mi billete a Valencia en minutos. ¡Muy fácil y barato!”</p>
       <strong>– Marta R.</strong>
     </div>
     <div class="card">
@@ -128,7 +127,7 @@
         `).join("");
 
         resultados.innerHTML = `
-          <h2>Resultados para ${tipo.charAt(0).toUpperCase() + tipo.slice(1)}</h2>
+          <h2>Resultados de billetes en ${tipo.charAt(0).toUpperCase() + tipo.slice(1)}</h2>
           ${resultadosHTML}
         `;
       });
