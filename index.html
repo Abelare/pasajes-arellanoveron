@@ -3,38 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Arellano Travel - Comparador de billetes</title>
+  <title>Arellano Travel - Billetes económicos</title>
 
-  <meta name="description" content="Compara billetes económicos en avión, tren y autobús desde Madrid." />
-  <meta name="keywords" content="Arellano Travel, billetes baratos, viajes Madrid, tren, avión, bus" />
+  <meta name="description" content="Compara billetes de avión, tren y autobús desde Madrid con Arellano Travel." />
+  <meta name="keywords" content="billetes baratos, vuelos Madrid, tren, autobús, Arellano Travel" />
   <meta name="author" content="Arellano Travel" />
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
 
   <style>
-    /* === Estilo general === */
     body {
       font-family: 'Poppins', sans-serif;
       margin: 0;
       padding: 0;
       background: linear-gradient(to bottom, #eaf3fc, #ffffff);
       color: #333;
-      transition: background 0.5s ease;
     }
 
-    /* === Branding con logo integrado === */
-    .branding {
+    /* Cabecera con logo */
+    header {
       background-color: #0077cc;
+      padding: 30px 0;
       text-align: center;
-      padding: 40px 0;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      transition: padding 0.3s ease;
     }
 
-    .logo {
-      width: 90px;
+    header img.logo {
+      width: 100px;
       height: auto;
-      margin: 0 auto;
       animation: fadeIn 1s ease;
     }
 
@@ -43,36 +39,30 @@
       to { opacity: 1; transform: scale(1); }
     }
 
-    /* === Título del servicio === */
-    .titulo-servicio {
+    /* Título */
+    .titulo {
       text-align: center;
-      margin: 40px 0 10px;
+      margin: 40px 0 20px;
     }
 
-    .titulo-servicio h2 {
-      font-size: 30px;
+    .titulo h1 {
+      font-size: 28px;
       margin-bottom: 10px;
     }
 
-    .titulo-servicio p {
-      font-size: 18px;
+    .titulo p {
+      font-size: 16px;
       color: #555;
     }
 
-    /* === Buscador moderno === */
+    /* Buscador */
     .buscador {
       background-color: white;
-      padding: 40px;
-      max-width: 600px;
-      margin: 50px auto;
+      max-width: 700px;
+      margin: 0 auto 40px;
+      padding: 30px;
       border-radius: 16px;
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-      transition: box-shadow 0.3s ease;
-    }
-
-    .buscador .campo {
-      margin-bottom: 20px;
-      text-align: left;
     }
 
     .buscador label {
@@ -84,17 +74,11 @@
     .buscador input,
     .buscador select {
       width: 100%;
-      padding: 16px;
-      font-size: 18px;
+      padding: 14px;
+      margin-bottom: 20px;
+      font-size: 16px;
       border-radius: 10px;
       border: 1px solid #ccc;
-      transition: border 0.3s ease;
-    }
-
-    .buscador input:focus,
-    .buscador select:focus {
-      border-color: #0077cc;
-      outline: none;
     }
 
     .buscador button {
@@ -113,20 +97,14 @@
       background-color: #005fa3;
     }
 
-    /* === Resultados === */
+    /* Resultados */
     #resultados {
-      padding: 20px;
       max-width: 1000px;
       margin: 0 auto;
+      padding: 20px;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 20px;
-    }
-
-    #resultados h2 {
-      grid-column: 1 / -1;
-      text-align: center;
-      margin-bottom: 20px;
     }
 
     .card {
@@ -142,28 +120,22 @@
       transform: translateY(-5px);
     }
 
-    .card h3 {
-      margin-top: 10px;
-      font-size: 20px;
-    }
-
-    .icono-transporte {
+    .card img {
       width: 40px;
-      height: auto;
       margin-bottom: 10px;
     }
 
-    .card button {
-      margin-top: 10px;
-      padding: 10px 20px;
-      background-color: #0077cc;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
+    .card h3 {
+      margin: 10px 0;
+      font-size: 20px;
     }
 
-    /* === Footer === */
+    .card p {
+      margin: 5px 0;
+      font-size: 15px;
+    }
+
+    /* Footer */
     footer {
       background-color: #0077cc;
       color: white;
@@ -179,37 +151,33 @@
   </style>
 </head>
 <body>
-  <header class="branding">
+  <header>
     <img src="img/logo.png" alt="Logo Arellano Travel" class="logo" />
   </header>
 
-  <section class="titulo-servicio">
-    <h2>Billetes Arellanoveron</h2>
-    <p>Compara billetes económicos de avión, tren y autobús desde Madrid</p>
+  <section class="titulo">
+    <h1>Compara billetes desde Madrid</h1>
+    <p>Vuelos, trenes y autobuses al mejor precio</p>
   </section>
 
   <section class="buscador">
     <form id="formulario">
-      <div class="campo">
-        <label for="origen">Origen</label>
-        <input type="text" id="origen" placeholder="Ej. Madrid" required />
-      </div>
-      <div class="campo">
-        <label for="destino">Destino</label>
-        <input type="text" id="destino" placeholder="Ej. Barcelona" required />
-      </div>
-      <div class="campo">
-        <label for="fecha">Fecha</label>
-        <input type="date" id="fecha" required />
-      </div>
-      <div class="campo">
-        <label for="tipo">Transporte</label>
-        <select id="tipo">
-          <option value="avion">Avión</option>
-          <option value="tren">Tren</option>
-          <option value="bus">Autobús</option>
-        </select>
-      </div>
+      <label for="origen">Origen</label>
+      <input type="text" id="origen" placeholder="Ej. Madrid" required />
+
+      <label for="destino">Destino</label>
+      <input type="text" id="destino" placeholder="Ej. Barcelona" required />
+
+      <label for="fecha">Fecha</label>
+      <input type="date" id="fecha" required />
+
+      <label for="tipo">Transporte</label>
+      <select id="tipo">
+        <option value="avion">Avión</option>
+        <option value="tren">Tren</option>
+        <option value="bus">Autobús</option>
+      </select>
+
       <button type="submit">Buscar billetes</button>
     </form>
   </section>
@@ -218,43 +186,52 @@
 
   <footer>
     <p>&copy; 2025 Arellano Travel. Todos los derechos reservados.</p>
-    <p><a href="#">Aviso legal</a> | <a href="#">Política de privacidad</a> | <a href="#">Contacto</a></p>
+    <p><a href="#">Aviso legal</a> | <a href="#">Política de privacidad</a></p>
   </footer>
 
   <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const formulario = document.getElementById("formulario");
+    document.getElementById("formulario").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const origen = document.getElementById("origen").value.trim();
+      const destino = document.getElementById("destino").value.trim();
+      const fecha = document.getElementById("fecha").value;
+      const tipo = document.getElementById("tipo").value;
+
+      const iconos = {
+        avion: "img/avion.png",
+        tren: "img/tren.png",
+        bus: "img/bus.png"
+      };
+
+      const opciones = {
+        avion: [
+          { nombre: "Ryanair", precio: "29.99€", duracion: "1h 15min" },
+          { nombre: "Vueling", precio: "34.50€", duracion: "1h 20min" }
+        ],
+        tren: [
+          { nombre: "Renfe", precio: "19.90€", duracion: "2h 45min" },
+          { nombre: "Iryo", precio: "24.75€", duracion: "2h 30min" }
+        ],
+        bus: [
+          { nombre: "Alsa", precio: "14.50€", duracion: "4h 30min" },
+          { nombre: "FlixBus", precio: "18.00€", duracion: "4h 15min" }
+        ]
+      };
+
       const resultados = document.getElementById("resultados");
+      const tarjetas = opciones[tipo].map(opcion => `
+        <div class="card">
+          <img src="${iconos[tipo]}" alt="${tipo}" />
+          <h3>${opcion.nombre}</h3>
+          <p>${origen} → ${destino}</p>
+          <p>${fecha}</p>
+          <p>${opcion.precio} · ${opcion.duracion}</p>
+        </div>
+      `).join("");
 
-      formulario.addEventListener("submit", (e) => {
-        e.preventDefault();
-
-        const origen = document.getElementById("origen").value.trim();
-        const destino = document.getElementById("destino").value.trim();
-        const fecha = document.getElementById("fecha").value;
-        const tipo = document.getElementById("tipo").value;
-
-        if (!origen || !destino || !fecha || !tipo) {
-          resultados.innerHTML = "<p style='color:red;'>Por favor, completa todos los campos.</p>";
-          return;
-        }
-
-        const iconos = {
-          avion: "img/avion.png",
-          tren: "img/tren.png",
-          bus: "img/bus.png"
-        };
-
-        const opciones = {
-          avion: [
-            { nombre: "Ryanair", precio: "29.99€", duracion: "1h 15min" },
-            { nombre: "Vueling", precio: "34.50€", duracion: "1h 20min" },
-            { nombre: "EasyJet", precio: "39.00€", duracion: "1h 10min" }
-          ],
-          tren: [
-            { nombre: "Renfe", precio: "19.90€", duracion: "2h 45min" },
-            { nombre: "Ouigo", precio: "24.75€", duracion: "2h 30min" },
-            { nombre: "Iryo", precio: "31.00€", duracion: "2h 20min" }
-          ],
-          bus: [
-            { nombre: "Alsa", precio: "14.50
+      resultados.innerHTML = `<h2>Resultados para ${tipo}</h2>${tarjetas}`;
+    });
+  </script>
+</body>
+</html>
