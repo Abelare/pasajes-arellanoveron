@@ -24,26 +24,42 @@ nav {
 .nav-logo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
 }
 
 .nav-logo img {
-  width: 52px !important; /* Forzado para evitar conflictos */
+  width: 64px;
   height: auto;
   display: block;
 }
 
 .nav-logo strong {
-  font-size: 20px;
+  font-size: 22px;
   color: var(--azul);
 }
 
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
 .nav-links a {
-  margin-left: 20px;
   text-decoration: none;
   color: var(--azul);
   font-weight: 600;
 }
+
+/* Responsive logo en móviles */
+@media (max-width: 600px) {
+  .nav-logo img {
+    width: 48px;
+  }
+
+  .nav-logo strong {
+    font-size: 18px;
+  }
+}
+
 
 /* Hero principal */
 header {
