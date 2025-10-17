@@ -10,15 +10,15 @@ body {
 /* === Branding principal === */
 .branding {
   background-color: #0077cc;
-  color: white;
   text-align: center;
-  padding: 20px;
+  padding: 40px 0;
 }
 
-.logo {
-  max-width: 100px;
+.logo-grande {
+  max-width: 180px;
   height: auto;
-  margin-bottom: 10px;
+  display: block;
+  margin: 0 auto;
 }
 
 /* === Título del servicio === */
@@ -147,14 +147,4 @@ footer a {
   color: #ffffff;
   text-decoration: underline;
 }
-.logo-grande {
-  max-width: 100px;
-  height: auto;
-  display: block;
-  margin: 40px auto;
-}
-.branding {
-  background-color: #0077cc;
-  padding: 60px 0;
-  text-align: center;
-}
+
