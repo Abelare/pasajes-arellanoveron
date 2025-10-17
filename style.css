@@ -7,19 +7,20 @@ body {
   color: #333;
 }
 
-/* === Branding principal === */
+/* Branding principal */
 .branding {
   background-color: #0077cc;
   text-align: center;
-  padding: 30px 0;
+  padding: 20px 0;
 }
 
 .logo {
-  max-width: 120px;
+  width: 100px; /* Tamaño fijo más controlado */
   height: auto;
   display: block;
   margin: 0 auto;
 }
+
 
 /* === Título del servicio === */
 .titulo-servicio {
