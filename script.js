@@ -1,48 +1,47 @@
-// script.js
+document.getElementById("formulario").addEventListener("submit", function (e) {
+  e.preventDefault();
 
-document.addEventListener("DOMContentLoaded", () => {
-  const formulario = document.getElementById("formulario");
-  const resultados = document.getElementById("resultados");
+  const origen = document.getElementById("origen").value.trim();
+  const destino = document.getElementById("destino").value.trim();
+  const fecha = document.getElementById("fecha").value;
+  const tipo = document.getElementById("tipo").value;
+  const directo = document.getElementById("directo").checked;
+  const hotel = document.getElementById("hotel").checked;
 
-  formulario.addEventListener("submit", function (e) {
-    e.preventDefault();
+  const iconos = {
+    avion: "img/avion.png",
+    tren: "img/tren.png",
+    bus: "img/bus.png"
+  };
 
-    const origen = document.getElementById("origen").value.trim();
-    const destino = document.getElementById("destino").value.trim();
-    const fecha = document.getElementById("fecha").value;
-    const tipo = document.getElementById("tipo").value;
+  const opciones = {
+    avion: [
+      { nombre: "Ryanair", precio: "29.99€", duracion: "1h 15min", directo: true },
+      { nombre: "Vueling", precio: "34.50€", duracion: "1h 20min", directo: false }
+    ],
+    tren: [
+      { nombre: "Renfe", precio: "19.90€", duracion: "2h 45min", directo: true },
+      { nombre: "Iryo", precio: "24.75€", duracion: "2h 30min", directo: true }
+    ],
+    bus: [
+      { nombre: "Alsa", precio: "14.50€", duracion: "4h 30min", directo: false },
+      { nombre: "FlixBus", precio: "18.00€", duracion: "4h 15min", directo: true }
+    ]
+  };
 
-    if (!origen || !destino || !fecha || !tipo) {
-      resultados.innerHTML = `<p style="color:red;">Por favor, completa todos los campos.</p>`;
-      return;
-    }
+  let resultados = opciones[tipo];
 
-    // Simulación de resultados
-    const opciones = {
-      avion: [
-        { empresa: "Ryanair", precio: "29.99€" },
-        { empresa: "Vueling", precio: "34.50€" },
-        { empresa: "EasyJet", precio: "39.00€" }
-      ],
-      tren: [
-        { empresa: "Renfe", precio: "19.99€" },
-        { empresa: "Ouigo", precio: "22.50€" },
-        { empresa: "Iryo", precio: "25.00€" }
-      ],
-      bus: [
-        { empresa: "Alsa", precio: "14.99€" },
-        { empresa: "FlixBus", precio: "16.50€" },
-        { empresa: "BlaBlaBus", precio: "18.00€" }
-      ]
-    };
+  if (directo) {
+    resultados = resultados.filter(op => op.directo);
+  }
 
-    const resultadosHTML = opciones[tipo]
-      .map(opcion => `<li>${opcion.empresa} – ${opcion.precio}</li>`)
-      .join("");
-
-    resultados.innerHTML = `
-      <h2>Resultados para ${tipo} de ${origen} a ${destino} el ${fecha}</h2>
-      <ul>${resultadosHTML}</ul>
-    `;
-  });
-});
+  const html = resultados.map(op => `
+    <div class="card">
+      <img src="${iconos[tipo]}" alt="${tipo}" />
+      <h3>${op.nombre}</h3>
+      <p>${origen} → ${destino}</p>
+      <p>${fecha}</p>
+      <p>${op.precio} · ${op.duracion}</p>
+      ${hotel ? "<p>+ Hotel incluido</p>" : ""}
+    </div>
+  `).
