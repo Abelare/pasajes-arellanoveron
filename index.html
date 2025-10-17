@@ -3,23 +3,182 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arellano Travel - Comparador de pasajes</title>
 
-  <title>Pasajes Arellanoveron - Viajes económicos desde Madrid</title>
+  <meta name="description" content="Compara pasajes económicos en avión, tren y autobús desde Madrid.">
+  <meta name="keywords" content="Arellano Travel, pasajes baratos, viajes Madrid, tren, avión, bus">
+  <meta name="author" content="Arellano Travel">
 
-  <meta name="description" content="Pasajes Arellanoveron: Encuentra pasajes económicos en avión, tren y autobús desde Madrid.">
-  <meta name="keywords" content="Arellano Travel, pasajes baratos, viajes Madrid Barcelona, tren, avión, bus">
-  <meta name="author" content="Arellanoveron">
-
-  <!-- Fuente moderna -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    /* Branding */
+    .branding {
+      background-color: #0077cc;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .branding .logo {
+      max-width: 100px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .branding nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* Título del servicio */
+    .titulo-servicio {
+      text-align: center;
+      margin: 30px 0 10px;
+    }
+
+    .titulo-servicio h2 {
+      font-size: 28px;
+      color: #333;
+      margin-bottom: 5px;
+    }
+
+    .titulo-servicio p {
+      font-size: 16px;
+      color: #666;
+    }
+
+    /* Buscador */
+    .buscador {
+      background-color: #ffffff;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      margin: 20px;
+      border-radius: 8px;
+    }
+
+    .buscador input,
+    .buscador select,
+    .buscador button {
+      padding: 10px;
+      margin: 5px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .buscador button {
+      background-color: #0077cc;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .buscador button:hover {
+      background-color: #005fa3;
+    }
+
+    /* Resultados */
+    #resultados {
+      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .card h3 {
+      margin-top: 10px;
+      font-size: 20px;
+    }
+
+    .icono-transporte {
+      width: 40px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    /* Ventajas */
+    .ventajas {
+      background-color: #eef6ff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .ventajas h2 {
+      margin-bottom: 10px;
+    }
+
+    .ventajas ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .ventajas li {
+      margin: 8px 0;
+      font-size: 16px;
+    }
+
+    /* Testimonios */
+    .testimonios {
+      padding: 20px;
+      background-color: #fff;
+      text-align: center;
+    }
+
+    .testimonios h2 {
+      margin-bottom: 20px;
+    }
+
+    .testimonios .card {
+      margin: 10px auto;
+      max-width: 400px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #0077cc;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+    }
+
+    footer a {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
   <!-- Branding principal -->
   <header class="branding">
     <img src="img/logo.png" alt="Logo Arellano Travel" class="logo">
     <h1>Arellano Travel</h1>
+    <nav>
+      <a href="#">Inicio</a>
+      <a href="#">Sobre Nosotros</a>
+      <a href="#">Contacto</a>
+    </nav>
   </header>
 
   <!-- Título del servicio -->
@@ -30,6 +189,7 @@
 
   <!-- Buscador -->
   <section class="buscador">
+    <h2>Encuentra tu pasaje ideal</h2>
     <form id="formulario">
       <input type="text" id="origen" placeholder="Origen" required>
       <input type="text" id="destino" placeholder="Destino" required>
@@ -46,14 +206,14 @@
   <!-- Resultados -->
   <section id="resultados"></section>
 
-  <!-- Ventajas del servicio -->
+  <!-- Ventajas -->
   <section class="ventajas">
-    <h2>¿Por qué elegirnos?</h2>
+    <h2>¿Por qué elegir Arellano Travel?</h2>
     <ul>
-      <li>✅ Compara precios en tiempo real</li>
-      <li>✅ Sin comisiones ocultas</li>
-      <li>✅ Atención personalizada</li>
-      <li>✅ Cobertura nacional desde Madrid</li>
+      <li>🔍 Comparador en tiempo real</li>
+      <li>💸 Sin comisiones ocultas</li>
+      <li>📍 Cobertura nacional desde Madrid</li>
+      <li>📞 Atención personalizada</li>
     </ul>
   </section>
 
@@ -61,23 +221,57 @@
   <section class="testimonios">
     <h2>Opiniones de viajeros</h2>
     <div class="card">
-      <p>“Reservé mi pasaje a Barcelona en minutos. ¡Muy fácil y barato!”</p>
-      <strong>– Laura G.</strong>
+      <p>“Reservé mi pasaje a Valencia en minutos. ¡Muy fácil y barato!”</p>
+      <strong>– Marta R.</strong>
     </div>
     <div class="card">
-      <p>“Me encantó poder comparar tren y avión en una sola página.”</p>
-      <strong>– Javier M.</strong>
+      <p>“Comparé tren y avión en segundos. Muy útil.”</p>
+      <strong>– Luis F.</strong>
     </div>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Arellanoveron. Todos los derechos reservados.</p>
-    <p><a href="#">Aviso legal</a> | <a href="#">Política de privacidad</a></p>
+    <p>&copy; 2025 Arellano Travel. Todos los derechos reservados.</p>
+    <p><a href="#">Aviso legal</a> | <a href="#">Política de privacidad</a> | <a href="#">Contacto</a></p>
   </footer>
 
-  <script src="script.js" defer></script>
-</body>
-</html>
+  <!-- Script funcional -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const formulario = document.getElementById("formulario");
+      const resultados = document.getElementById("resultados");
 
+      formulario.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const origen = document.getElementById("origen").value.trim();
+        const destino = document.getElementById("destino").value.trim();
+        const fecha = document.getElementById("fecha").value;
+        const tipo = document.getElementById("tipo").value;
+
+        if (!origen || !destino || !fecha || !tipo) {
+          resultados.innerHTML = "<p>Por favor, completa todos los campos.</p>";
+          return;
+        }
+
+        const iconos = {
+          avion: "img/avion.png",
+          tren: "img/tren.png",
+          bus: "img/bus.png"
+        };
+
+        const opciones = {
+          avion: [
+            { nombre: "Compañía Económica", precio: "29.99€" },
+            { nombre: "Compañía Express", precio: "34.50€" },
+            { nombre: "Compañía Flex", precio: "39.00€" }
+          ],
+          tren: [
+            { nombre: "Tren Regional", precio: "19.90€" },
+            { nombre: "Tren Rápido", precio: "24.75€" },
+            { nombre: "Tren Premium", precio: "31.00€" }
+          ],
+          bus: [
+            { nombre: "Bus
 
