@@ -11,11 +11,11 @@ body {
 .branding {
   background-color: #0077cc;
   text-align: center;
-  padding: 20px 0;
+  padding: 25px 0;
 }
 
 .logo {
-  width: 100px; /* Tamaño fijo más controlado */
+  width: 150px; /* Tamaño fijo más controlado */
   height: auto;
   display: block;
   margin: 0 auto;
