@@ -28,7 +28,7 @@ nav {
 }
 
 .nav-logo img {
-  width: 52px;
+  width: 52px !important; /* 30% más grande que 40px */
   height: auto;
 }
 
