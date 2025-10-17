@@ -23,8 +23,11 @@ nav {
 
 .nav-logo {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
+}
+
 }
 
 .nav-logo img {
