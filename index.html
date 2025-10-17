@@ -1,101 +1,119 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Arellano Travel - Comparador de billetes</title>
 
-  <meta name="description" content="Compara billetes económicos en avión, tren y autobús desde Madrid.">
-  <meta name="keywords" content="Arellano Travel, billetes baratos, viajes Madrid, tren, avión, bus">
-  <meta name="author" content="Arellano Travel">
+  <meta name="description" content="Compara billetes económicos en avión, tren y autobús desde Madrid." />
+  <meta name="keywords" content="Arellano Travel, billetes baratos, viajes Madrid, tren, avión, bus" />
+  <meta name="author" content="Arellano Travel" />
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
 
   <style>
+    /* === Estilo general === */
     body {
       font-family: 'Poppins', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f5f8fa;
+      background: linear-gradient(to bottom, #eaf3fc, #ffffff);
       color: #333;
+      transition: background 0.5s ease;
     }
 
-    /* Branding */
+    /* === Branding con logo integrado === */
     .branding {
       background-color: #0077cc;
       text-align: center;
-      padding: 30px 0;
+      padding: 40px 0;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: padding 0.3s ease;
     }
 
     .logo {
-      width: 100px;
+      width: 90px;
       height: auto;
-      display: block;
       margin: 0 auto;
+      animation: fadeIn 1s ease;
     }
 
-    /* Título */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    /* === Título del servicio === */
     .titulo-servicio {
       text-align: center;
-      margin: 30px 0 10px;
+      margin: 40px 0 10px;
     }
 
     .titulo-servicio h2 {
-      font-size: 28px;
-      margin-bottom: 5px;
+      font-size: 30px;
+      margin-bottom: 10px;
     }
 
     .titulo-servicio p {
-      font-size: 16px;
-      color: #666;
+      font-size: 18px;
+      color: #555;
     }
 
-    /* Buscador */
+    /* === Buscador moderno === */
     .buscador {
       background-color: white;
-      padding: 30px;
+      padding: 40px;
       max-width: 600px;
-      margin: 40px auto;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      margin: 50px auto;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.3s ease;
     }
 
     .buscador .campo {
-      margin-bottom: 15px;
+      margin-bottom: 20px;
       text-align: left;
     }
 
     .buscador label {
       display: block;
-      margin-bottom: 5px;
+      margin-bottom: 6px;
       font-weight: 600;
     }
 
     .buscador input,
     .buscador select {
       width: 100%;
-      padding: 12px;
-      border-radius: 8px;
+      padding: 16px;
+      font-size: 18px;
+      border-radius: 10px;
       border: 1px solid #ccc;
-      font-size: 16px;
+      transition: border 0.3s ease;
+    }
+
+    .buscador input:focus,
+    .buscador select:focus {
+      border-color: #0077cc;
+      outline: none;
     }
 
     .buscador button {
       width: 100%;
-      padding: 14px;
+      padding: 16px;
       background-color: #0077cc;
       color: white;
       border: none;
-      border-radius: 8px;
+      border-radius: 10px;
       font-size: 18px;
       cursor: pointer;
+      transition: background-color 0.3s ease;
     }
 
     .buscador button:hover {
       background-color: #005fa3;
     }
 
-    /* Resultados */
+    /* === Resultados === */
     #resultados {
       padding: 20px;
       max-width: 1000px;
@@ -115,8 +133,13 @@
       background-color: white;
       border-radius: 12px;
       padding: 20px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
       text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
     }
 
     .card h3 {
@@ -140,49 +163,12 @@
       cursor: pointer;
     }
 
-    /* Ventajas */
-    .ventajas {
-      background-color: #eef6ff;
-      padding: 20px;
-      text-align: center;
-    }
-
-    .ventajas h2 {
-      margin-bottom: 10px;
-    }
-
-    .ventajas ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .ventajas li {
-      margin: 8px 0;
-      font-size: 16px;
-    }
-
-    /* Testimonios */
-    .testimonios {
-      padding: 20px;
-      background-color: #fff;
-      text-align: center;
-    }
-
-    .testimonios h2 {
-      margin-bottom: 20px;
-    }
-
-    .testimonios .card {
-      margin: 10px auto;
-      max-width: 400px;
-    }
-
-    /* Footer */
+    /* === Footer === */
     footer {
       background-color: #0077cc;
       color: white;
       text-align: center;
-      padding: 15px;
+      padding: 20px;
       font-size: 14px;
     }
 
@@ -194,27 +180,27 @@
 </head>
 <body>
   <header class="branding">
-    <img src="img/logo.png" alt="Logo Arellano Travel" class="logo">
+    <img src="img/logo.png" alt="Logo Arellano Travel" class="logo" />
   </header>
 
   <section class="titulo-servicio">
     <h2>Billetes Arellanoveron</h2>
-    <p>Encuentra billetes económicos de avión, tren y autobús desde Madrid</p>
+    <p>Compara billetes económicos de avión, tren y autobús desde Madrid</p>
   </section>
 
   <section class="buscador">
     <form id="formulario">
       <div class="campo">
         <label for="origen">Origen</label>
-        <input type="text" id="origen" placeholder="Ej. Madrid" required>
+        <input type="text" id="origen" placeholder="Ej. Madrid" required />
       </div>
       <div class="campo">
         <label for="destino">Destino</label>
-        <input type="text" id="destino" placeholder="Ej. Barcelona" required>
+        <input type="text" id="destino" placeholder="Ej. Barcelona" required />
       </div>
       <div class="campo">
         <label for="fecha">Fecha</label>
-        <input type="date" id="fecha" required>
+        <input type="date" id="fecha" required />
       </div>
       <div class="campo">
         <label for="tipo">Transporte</label>
@@ -229,28 +215,6 @@
   </section>
 
   <section id="resultados"></section>
-
-  <section class="ventajas">
-    <h2>¿Por qué elegir Arellano Travel?</h2>
-    <ul>
-      <li>🔍 Comparador en tiempo real</li>
-      <li>💸 Sin comisiones ocultas</li>
-      <li>📍 Cobertura nacional desde Madrid</li>
-      <li>📞 Atención personalizada</li>
-    </ul>
-  </section>
-
-  <section class="testimonios">
-    <h2>Opiniones de viajeros</h2>
-    <div class="card">
-      <p>“Reservé mi billete a Valencia en minutos. ¡Muy fácil y barato!”</p>
-      <strong>– Marta R.</strong>
-    </div>
-    <div class="card">
-      <p>“Comparé tren y avión en segundos. Muy útil.”</p>
-      <strong>– Luis F.</strong>
-    </div>
-  </section>
 
   <footer>
     <p>&copy; 2025 Arellano Travel. Todos los derechos reservados.</p>
@@ -285,4 +249,12 @@
           avion: [
             { nombre: "Ryanair", precio: "29.99€", duracion: "1h 15min" },
             { nombre: "Vueling", precio: "34.50€", duracion: "1h 20min" },
-            {
+            { nombre: "EasyJet", precio: "39.00€", duracion: "1h 10min" }
+          ],
+          tren: [
+            { nombre: "Renfe", precio: "19.90€", duracion: "2h 45min" },
+            { nombre: "Ouigo", precio: "24.75€", duracion: "2h 30min" },
+            { nombre: "Iryo", precio: "31.00€", duracion: "2h 20min" }
+          ],
+          bus: [
+            { nombre: "Alsa", precio: "14.50
