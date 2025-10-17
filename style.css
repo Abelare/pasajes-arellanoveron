@@ -28,14 +28,14 @@ nav {
 }
 
 .nav-logo img {
-  width: 64px;
+  width: 100px;
   height: auto;
   display: block;
 }
 
 .nav-logo strong {
-  font-size: 22px;
-  color: var(--azul);
+  font-size: 20px;
+  color: #000000; /* negro */
 }
 
 .nav-links {
@@ -48,6 +48,7 @@ nav {
   color: var(--azul);
   font-weight: 600;
 }
+
 
 /* Responsive logo en móviles */
 @media (max-width: 600px) {
