@@ -28,8 +28,14 @@ nav {
 }
 
 .nav-logo img {
-  width: 52px !important; /* 30% más grande que 40px */
+  width: 52px !important; /* Forzado para evitar conflictos */
   height: auto;
+  display: block;
+}
+
+.nav-logo strong {
+  font-size: 20px;
+  color: var(--azul);
 }
 
 .nav-links a {
@@ -209,6 +215,3 @@ footer a {
   height: 20px;
 }
 
-
-/* Buscador */
-.b
