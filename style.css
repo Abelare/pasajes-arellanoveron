@@ -147,3 +147,14 @@ footer a {
   color: #ffffff;
   text-decoration: underline;
 }
+.logo-grande {
+  max-width: 300px;
+  height: auto;
+  display: block;
+  margin: 40px auto;
+}
+.branding {
+  background-color: #0077cc;
+  padding: 60px 0;
+  text-align: center;
+}
