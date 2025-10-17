@@ -30,6 +30,9 @@ nav {
 .nav-logo img {
   width: 52px; /* 30% más grande que 40px */
   height: auto;
+  display: block;
+}
+
 }
 
 .nav-links a {
