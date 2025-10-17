@@ -1,35 +1,17 @@
-.nav-central {
+.nav-solo-logo {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
   padding: 20px;
   background-color: white;
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 
-.logo-centro {
-  width: 100px;
+.logo-grande {
+  width: 120px;
   height: auto;
-  margin-bottom: 8px;
+  display: block;
 }
-
-.nombre-centro {
-  font-size: 20px;
-  color: #000;
-  margin-bottom: 12px;
-}
-
-.nav-links {
-  display: flex;
-  gap: 20px;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: var(--azul);
-  font-weight: 600;
-}
-
 
 
 /* Responsive logo en móviles */
