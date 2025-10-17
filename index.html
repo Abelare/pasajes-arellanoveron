@@ -5,10 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Arellano Travel - Billetes económicos</title>
 
-  <meta name="description" content="Compara billetes de avión, tren y autobús desde Madrid con Arellano Travel." />
-  <meta name="keywords" content="billetes baratos, vuelos Madrid, tren, autobús, Arellano Travel" />
-  <meta name="author" content="Arellano Travel" />
-
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
 
   <style>
@@ -20,15 +16,14 @@
       color: #333;
     }
 
-    /* Cabecera con logo */
     header {
       background-color: #0077cc;
-      padding: 30px 0;
       text-align: center;
+      padding: 30px 0;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
 
-    header img.logo {
+    .logo {
       width: 100px;
       height: auto;
       animation: fadeIn 1s ease;
@@ -39,7 +34,6 @@
       to { opacity: 1; transform: scale(1); }
     }
 
-    /* Título */
     .titulo {
       text-align: center;
       margin: 40px 0 20px;
@@ -55,7 +49,6 @@
       color: #555;
     }
 
-    /* Buscador */
     .buscador {
       background-color: white;
       max-width: 700px;
@@ -97,7 +90,23 @@
       background-color: #005fa3;
     }
 
-    /* Resultados */
+    .filtros {
+      max-width: 700px;
+      margin: 0 auto 20px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 0 30px;
+    }
+
+    .filtros select {
+      flex: 1;
+      padding: 10px;
+      font-size: 15px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
     #resultados {
       max-width: 1000px;
       margin: 0 auto;
@@ -135,7 +144,6 @@
       font-size: 15px;
     }
 
-    /* Footer */
     footer {
       background-color: #0077cc;
       color: white;
@@ -182,6 +190,20 @@
     </form>
   </section>
 
+  <section class="filtros">
+    <select id="filtro-precio">
+      <option value="todos">Todos los precios</option>
+      <option value="30">Menos de 30€</option>
+      <option value="20">Menos de 20€</option>
+    </select>
+
+    <select id="filtro-duracion">
+      <option value="todas">Todas las duraciones</option>
+      <option value="90">Menos de 1h 30min</option>
+      <option value="180">Menos de 3h</option>
+    </select>
+  </section>
+
   <section id="resultados"></section>
 
   <footer>
@@ -190,6 +212,27 @@
   </footer>
 
   <script>
+    const opciones = {
+      avion: [
+        { nombre: "Ryanair", precio: 29.99, duracion: 75 },
+        { nombre: "Vueling", precio: 34.50, duracion: 80 }
+      ],
+      tren: [
+        { nombre: "Renfe", precio: 19.90, duracion: 165 },
+        { nombre: "Iryo", precio: 24.75, duracion: 150 }
+      ],
+      bus: [
+        { nombre: "Alsa", precio: 14.50, duracion: 270 },
+        { nombre: "FlixBus", precio: 18.00, duracion: 255 }
+      ]
+    };
+
+    const iconos = {
+      avion: "img/avion.png",
+      tren: "img/tren.png",
+      bus: "img/bus.png"
+    };
+
     document.getElementById("formulario").addEventListener("submit", function (e) {
       e.preventDefault();
 
@@ -197,41 +240,27 @@
       const destino = document.getElementById("destino").value.trim();
       const fecha = document.getElementById("fecha").value;
       const tipo = document.getElementById("tipo").value;
+      const filtroPrecio = parseFloat(document.getElementById("filtro-precio").value);
+      const filtroDuracion = parseFloat(document.getElementById("filtro-duracion").value);
 
-      const iconos = {
-        avion: "img/avion.png",
-        tren: "img/tren.png",
-        bus: "img/bus.png"
-      };
+      let resultados = opciones[tipo];
 
-      const opciones = {
-        avion: [
-          { nombre: "Ryanair", precio: "29.99€", duracion: "1h 15min" },
-          { nombre: "Vueling", precio: "34.50€", duracion: "1h 20min" }
-        ],
-        tren: [
-          { nombre: "Renfe", precio: "19.90€", duracion: "2h 45min" },
-          { nombre: "Iryo", precio: "24.75€", duracion: "2h 30min" }
-        ],
-        bus: [
-          { nombre: "Alsa", precio: "14.50€", duracion: "4h 30min" },
-          { nombre: "FlixBus", precio: "18.00€", duracion: "4h 15min" }
-        ]
-      };
+      if (!isNaN(filtroPrecio)) {
+        resultados = resultados.filter(op => op.precio <= filtroPrecio);
+      }
 
-      const resultados = document.getElementById("resultados");
-      const tarjetas = opciones[tipo].map(opcion => `
+      if (!isNaN(filtroDuracion)) {
+        resultados = resultados.filter(op => op.duracion <= filtroDuracion);
+      }
+
+      const html = resultados.map(op => `
         <div class="card">
           <img src="${iconos[tipo]}" alt="${tipo}" />
-          <h3>${opcion.nombre}</h3>
+          <h3>${op.nombre}</h3>
           <p>${origen} → ${destino}</p>
           <p>${fecha}</p>
-          <p>${opcion.precio} · ${opcion.duracion}</p>
+          <p>${op.precio.toFixed(2)}€ · ${Math.floor(op.duracion / 60)}h ${op.duracion % 60}min</p>
         </div>
       `).join("");
 
-      resultados.innerHTML = `<h2>Resultados para ${tipo}</h2>${tarjetas}`;
-    });
-  </script>
-</body>
-</html>
+      document.getElementById("resultados").innerHTML = `<h2>Resultados filtrados</h2
