@@ -1,41 +1,22 @@
-:root {
-  --azul: #0077cc;
-  --gris-claro: #f5f8fa;
-  --gris-texto: #555;
-}
-
-body {
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  background-color: var(--gris-claro);
-  color: #333;
-}
-
-/* Navegación superior */
-nav {
-  background-color: white;
-  padding: 10px 30px;
+.nav-central {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
+  padding: 20px;
+  background-color: white;
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 
-.nav-logo {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.nav-logo img {
+.logo-centro {
   width: 100px;
   height: auto;
-  display: block;
+  margin-bottom: 8px;
 }
 
-.nav-logo strong {
+.nombre-centro {
   font-size: 20px;
-  color: #000000; /* negro */
+  color: #000;
+  margin-bottom: 12px;
 }
 
 .nav-links {
@@ -48,6 +29,7 @@ nav {
   color: var(--azul);
   font-weight: 600;
 }
+
 
 
 /* Responsive logo en móviles */
