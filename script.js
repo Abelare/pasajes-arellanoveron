@@ -53,3 +53,9 @@ document.querySelectorAll('input[name="viaje"]').forEach(radio => {
     vuelta.style.display = this.value === "ida-vuelta" ? "block" : "none";
   });
 });
+document.querySelectorAll('input[name="viaje"]').forEach(radio => {
+  radio.addEventListener("change", function () {
+    const vuelta = document.getElementById("fecha-vuelta-container");
+    vuelta.style.display = this.value === "ida-vuelta" ? "block" : "none";
+  });
+});
