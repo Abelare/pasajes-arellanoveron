@@ -174,3 +174,61 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
+/* Navegación */
+.nav-logo-restaurado {
+  position: relative;
+  background-color: #c8102e;
+  padding: 0.5rem 0;
+  text-align: center;
+}
+
+.nav-logo-restaurado img {
+  height: 120px;
+  filter: brightness(0);
+  margin-top: -10px;
+  margin-bottom: -10px;
+}
+
+/* Botones en esquina superior derecha */
+.nav-links {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* Tipo de viaje */
+.tipo-viaje {
+  grid-column: span 2;
+  margin-bottom: 1rem;
+}
+
+.tipo-viaje label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.opciones-viaje {
+  display: flex;
+  gap: 2rem;
+}
+
+.opciones-viaje label {
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
