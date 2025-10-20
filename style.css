@@ -24,7 +24,7 @@ body {
 }
 
 .nav-logo-restaurado img {
-  height: 150px; /* Aumenta el tamaño */
+  height: 120px; /* Aumenta el tamaño */
   filter: brightness(0); /* Convierte el logo a dorado */
 }
 
