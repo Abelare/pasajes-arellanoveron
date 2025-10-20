@@ -28,49 +28,53 @@
   </header>
 
   <!-- Buscador -->
-  <section class="buscador">
-    <form id="formulario">
-  <!-- Tipo de viaje -->
-  <div class="tipo-viaje">
-    <label>Tipo de viaje:</label>
-    <div class="opciones-viaje">
-      <label><input type="radio" name="viaje" value="ida" checked /> Solo ida</label>
-      <label><input type="radio" name="viaje" value="ida-vuelta" /> Ida y vuelta</label>
+ <section class="buscador">
+  <form id="formulario">
+    <div class="tipo-viaje">
+      <label>Tipo de viaje</label>
+      <div class="opciones-viaje">
+        <label><input type="radio" name="viaje" value="ida" checked /> Solo ida</label>
+        <label><input type="radio" name="viaje" value="ida-vuelta" /> Ida y vuelta</label>
+      </div>
     </div>
-  </div>
 
-  <div>
-    <label for="origen">Origen</label>
-    <input type="text" id="origen" placeholder="Ej. Madrid" required />
-  </div>
-  <div>
-    <label for="destino">Destino</label>
-    <input type="text" id="destino" placeholder="Ej. Barcelona" required />
-  </div>
-  <div>
-    <label for="fecha">Fecha de salida</label>
-    <input type="date" id="fecha" required />
-  </div>
-  <div id="fecha-vuelta-container" style="display: none;">
-    <label for="fecha-vuelta">Fecha de vuelta</label>
-    <input type="date" id="fecha-vuelta" />
-  </div>
-  <div>
-    <label for="tipo">Transporte</label>
-    <select id="tipo">
-      <option value="avion">Avión</option>
-      <option value="tren">Tren</option>
-      <option value="bus">Autobús</option>
-    </select>
-  </div>
-  <div class="opciones">
-    <label><input type="checkbox" id="directo" /> Solo directos</label>
-    <label><input type="checkbox" id="hotel" /> Añadir hotel</label>
-  </div>
-  <button type="submit">Buscar</button>
-</form>
+    <div>
+      <label for="origen">Origen</label>
+      <input type="text" id="origen" placeholder="Ej. Madrid-Barajas (MAD)" required />
+    </div>
 
-  </section>
+    <div>
+      <label for="destino">Destino</label>
+      <input type="text" id="destino" placeholder="Ej. Barcelona (BCN)" required />
+    </div>
+
+    <div>
+      <label for="fecha">Fecha de salida</label>
+      <input type="date" id="fecha" required />
+    </div>
+
+    <div id="fecha-vuelta-container" style="display: none;">
+      <label for="fecha-vuelta">Fecha de vuelta</label>
+      <input type="date" id="fecha-vuelta" />
+    </div>
+
+    <div>
+      <label for="tipo">Transporte</label>
+      <select id="tipo">
+        <option value="avion">Avión</option>
+        <option value="tren">Tren</option>
+        <option value="bus">Autobús</option>
+      </select>
+    </div>
+
+    <div class="opciones">
+      <label><input type="checkbox" id="directo" /> Solo directos</label>
+      <label><input type="checkbox" id="hotel" /> Añadir hotel</label>
+    </div>
+
+    <button type="submit">Buscar</button>
+  </form>
+</section>
 
   <!-- Resultados -->
   <section id="resultados"></section>
