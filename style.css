@@ -1,4 +1,4 @@
-/* Navegación */
+/* ------------------ Navegación ------------------ */
 .nav-logo-restaurado {
   position: relative;
   background-color: #c8102e;
@@ -28,7 +28,11 @@
   font-size: 1rem;
 }
 
-/* Hero principal */
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* ------------------ Hero principal ------------------ */
 header {
   text-align: center;
   padding: 2rem 1rem;
@@ -44,7 +48,7 @@ header p {
   font-size: 1.2rem;
 }
 
-/* Buscador */
+/* ------------------ Buscador ------------------ */
 .buscador {
   background-color: #fff8f0;
   padding: 2rem;
@@ -64,6 +68,22 @@ form {
   gap: 1rem;
 }
 
+form label {
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  display: block;
+  color: #c8102e;
+}
+
+form input,
+form select {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
 .tipo-viaje {
   grid-column: span 2;
 }
@@ -73,45 +93,41 @@ form {
   gap: 2rem;
 }
 
-/* Resultados */
+.opciones {
+  grid-column: span 2;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+button[type="submit"] {
+  grid-column: span 2;
+  padding: 0.8rem 1.5rem;
+  background-color: #c8102e;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #a60c24;
+}
+
+#fecha-vuelta-container {
+  transition: all 0.3s ease;
+}
+
+/* ------------------ Resultados ------------------ */
 #resultados {
   padding: 2rem;
   display: grid;
   gap: 1.5rem;
 }
 
-/* FAQ */
-.faq {
-  background-color: #f9f9f9;
-  padding: 2rem;
-}
-
-.faq h2 {
-  text-align: center;
-  margin-bottom: 2rem;
-  color: #c8102e;
-}
-
-details {
-  margin-bottom: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  padding: 1rem;
-  background-color: #fff;
-}
-
-summary {
-  font-weight: 600;
-  cursor: pointer;
-}
-
-/* Footer */
-footer {
-  background-color: #f2f2f2;
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
-}
+/* ------------------ Preguntas frecuentes ------------------ */
 .faq {
   background-color: #f9f9f9;
   padding: 2rem;
@@ -153,6 +169,22 @@ summary {
   object-fit: contain;
   border-radius: 4px;
 }
-#fecha-vuelta-container {
-  transition: all 0.3s ease;
+
+/* ------------------ Footer ------------------ */
+footer {
+  background-color: #f2f2f2;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
 }
+
+footer a {
+  color: #c8102e;
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
