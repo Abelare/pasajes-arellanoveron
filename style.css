@@ -14,23 +14,27 @@ body {
 }
 
 /* Navegación */
-.nav-logo-restaurado img {
-  height: 70px; /* más grande */
-  margin-top: -15px; /* lo sube visualmente */
-  margin-bottom: -15px; /* lo baja visualmente */
+.nav-logo-restaurado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem 0;
+  background-color: #c8102e;
 }
 
 .nav-logo-restaurado img {
-  height: 120px; /* Aumenta el tamaño */
-  filter: brightness(0); /* Convierte el logo a dorado */
+  height: 120px; /* Logo grande */
+  filter: brightness(0); /* Logo en negro */
+  margin-top: -10px; /* Ajuste visual */
+  margin-bottom: -10px;
 }
 
-.nav-logo-restaurado strong {
-  font-size: 1.5rem;
+.nav-links {
+  margin-top: 0.5rem;
 }
 
 .nav-links a {
-  margin-left: 1.5rem;
+  margin: 0 1rem;
   color: white;
   text-decoration: none;
   font-weight: 600;
@@ -166,4 +170,3 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
-
