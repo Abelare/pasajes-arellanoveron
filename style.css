@@ -14,13 +14,10 @@ body {
 }
 
 /* Navegación */
-.nav-logo-restaurado {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem 2rem;
-  background-color: #c8102e;
-  color: white;
+.nav-logo-restaurado img {
+  height: 70px; /* más grande */
+  margin-top: -15px; /* lo sube visualmente */
+  margin-bottom: -15px; /* lo baja visualmente */
 }
 
 .nav-logo-restaurado img {
