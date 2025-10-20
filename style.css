@@ -187,4 +187,38 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
+.card {
+  background-color: #fff;
+  border-left: 6px solid #c8102e;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 1rem;
+  align-items: center;
+}
+
+.card img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #c8102e;
+}
+
+.card p {
+  margin: 0.2rem 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.card p:last-child {
+  font-weight: 600;
+  color: #a60c24;
+}
 
