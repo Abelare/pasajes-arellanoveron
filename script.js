@@ -30,7 +30,6 @@ document.getElementById("formulario").addEventListener("submit", function (e) {
   };
 
   let resultados = opciones[tipo];
-
   if (directo) {
     resultados = resultados.filter(op => op.directo);
   }
@@ -44,4 +43,7 @@ document.getElementById("formulario").addEventListener("submit", function (e) {
       <p>${op.precio} · ${op.duracion}</p>
       ${hotel ? "<p>+ Hotel incluido</p>" : ""}
     </div>
-  `).
+  `).join("");
+
+  document.getElementById("resultados").innerHTML = html;
+});
