@@ -47,3 +47,9 @@ document.getElementById("formulario").addEventListener("submit", function (e) {
 
   document.getElementById("resultados").innerHTML = html;
 });
+document.querySelectorAll('input[name="viaje"]').forEach(radio => {
+  radio.addEventListener("change", function () {
+    const vuelta = document.getElementById("fecha-vuelta-container");
+    vuelta.style.display = this.value === "ida-vuelta" ? "block" : "none";
+  });
+});
