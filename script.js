@@ -1,17 +1,25 @@
+document.querySelectorAll('input[name="viaje"]').forEach(radio => {
+  radio.addEventListener("change", function () {
+    const vuelta = document.getElementById("fecha-vuelta-container");
+    vuelta.style.display = this.value === "ida-vuelta" ? "block" : "none";
+  });
+});
+
 document.getElementById("formulario").addEventListener("submit", function (e) {
   e.preventDefault();
 
   const origen = document.getElementById("origen").value.trim();
   const destino = document.getElementById("destino").value.trim();
   const fecha = document.getElementById("fecha").value;
+  const fechaVuelta = document.getElementById("fecha-vuelta")?.value || "";
   const tipo = document.getElementById("tipo").value;
   const directo = document.getElementById("directo").checked;
   const hotel = document.getElementById("hotel").checked;
 
   const iconos = {
-    avion: "img/avion.png",
-    tren: "img/tren.png",
-    bus: "img/bus.png"
+    avion: "img/logo.png", // temporal hasta que subas img/avion.png
+    tren: "img/logo.png",  // temporal hasta que subas img/tren.png
+    bus: "img/logo.png"    // temporal hasta que subas img/bus.png
   };
 
   const opciones = {
@@ -37,25 +45,15 @@ document.getElementById("formulario").addEventListener("submit", function (e) {
   const html = resultados.map(op => `
     <div class="card">
       <img src="${iconos[tipo]}" alt="${tipo}" />
-      <h3>${op.nombre}</h3>
-      <p>${origen} → ${destino}</p>
-      <p>${fecha}</p>
-      <p>${op.precio} · ${op.duracion}</p>
-      ${hotel ? "<p>+ Hotel incluido</p>" : ""}
+      <div class="card-info">
+        <h3>${op.nombre}</h3>
+        <p>${origen} → ${destino}</p>
+        <p>${fecha}${fechaVuelta ? ` → ${fechaVuelta}` : ""}</p>
+        <p>${op.precio} · ${op.duracion}</p>
+        ${hotel ? "<p>+ Hotel incluido</p>" : ""}
+      </div>
     </div>
   `).join("");
 
   document.getElementById("resultados").innerHTML = html;
-});
-document.querySelectorAll('input[name="viaje"]').forEach(radio => {
-  radio.addEventListener("change", function () {
-    const vuelta = document.getElementById("fecha-vuelta-container");
-    vuelta.style.display = this.value === "ida-vuelta" ? "block" : "none";
-  });
-});
-document.querySelectorAll('input[name="viaje"]').forEach(radio => {
-  radio.addEventListener("change", function () {
-    const vuelta = document.getElementById("fecha-vuelta-container");
-    vuelta.style.display = this.value === "ida-vuelta" ? "block" : "none";
-  });
 });
