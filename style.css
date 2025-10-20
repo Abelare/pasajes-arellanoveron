@@ -24,8 +24,8 @@ body {
 }
 
 .nav-logo-restaurado img {
-  height: 40px;
-  margin-right: 1rem;
+  height: 60px; /* Aumenta el tamaño */
+  filter: brightness(0); /* Convierte el logo a negro */
 }
 
 .nav-logo-restaurado strong {
