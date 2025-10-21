@@ -88,16 +88,12 @@ form select {
   grid-column: span 2;
 }
 
-.opciones-viaje {
-  display: flex;
-  gap: 2rem;
-}
-
+.opciones-viaje,
 .opciones {
-  grid-column: span 2;
   display: flex;
   gap: 2rem;
   align-items: center;
+  grid-column: span 2;
 }
 
 button[type="submit"] {
@@ -125,6 +121,86 @@ button[type="submit"]:hover {
   padding: 2rem;
   display: grid;
   gap: 1.5rem;
+}
+
+.card {
+  background-color: #fff;
+  border-left: 6px solid #c8102e;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 1rem;
+  align-items: center;
+}
+
+.card img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #c8102e;
+}
+
+.card p {
+  margin: 0.2rem 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.card p:last-child {
+  font-weight: 600;
+  color: #a60c24;
+}
+
+/* ------------------ Botones de reserva ------------------ */
+.btn-reserva,
+.btn-duffel {
+  background-color: #d70f0f;
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  font-size: 16px;
+}
+
+.btn-duffel {
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-size: 18px;
+}
+
+.btn-reserva:hover,
+.btn-duffel:hover {
+  background-color: #a10c0c;
+}
+
+/* ------------------ Sección de reserva ------------------ */
+.reserva {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
+
+.reserva h2 {
+  font-size: 28px;
+  color: #060505;
+  margin-bottom: 10px;
+}
+
+.reserva p {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 20px;
 }
 
 /* ------------------ Preguntas frecuentes ------------------ */
@@ -187,86 +263,3 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
-.card {
-  background-color: #fff;
-  border-left: 6px solid #c8102e;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  padding: 1.5rem;
-  display: grid;
-  grid-template-columns: 80px 1fr;
-  gap: 1rem;
-  align-items: center;
-}
-
-.card img {
-  width: 60px;
-  height: 60px;
-  object-fit: contain;
-}
-
-.card h3 {
-  margin: 0;
-  font-size: 1.2rem;
-  color: #c8102e;
-}
-
-.card p {
-  margin: 0.2rem 0;
-  font-size: 1rem;
-  color: #333;
-}
-
-.card p:last-child {
-  font-weight: 600;
-  color: #a60c24;
-}
-.btn-reserva {
-  background-color: #d70f0f; /* tu color primario */
-  color: #ffffff;
-  padding: 12px 24px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: bold;
-  display: inline-block;
-  transition: background-color 0.3s ease;
-}
-
-.btn-reserva:hover {
-  background-color: #a10c0c;
-}
-.reserva {
-  text-align: center;
-  padding: 40px 20px;
-  background-color: #f9f9f9;
-}
-
-.reserva h2 {
-  font-size: 28px;
-  color: #060505;
-  margin-bottom: 10px;
-}
-
-.reserva p {
-  font-size: 16px;
-  color: #333;
-  margin-bottom: 20px;
-}
-
-.btn-duffel {
-  background-color: #d70f0f; /* Color primario */
-  color: #ffffff;
-  padding: 14px 28px;
-  border-radius: 8px;
-  font-size: 18px;
-  font-weight: bold;
-  text-decoration: none;
-  display: inline-block;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  transition: background-color 0.3s ease;
-}
-
-.btn-duffel:hover {
-  background-color: #a10c0c;
-}
-
