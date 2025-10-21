@@ -149,3 +149,19 @@
   Reservar ahora
 </a>
 <a href="https://tusitio.com/reserva?oferta=12345&origen=MAD&destino=BOG&fecha=2025-11-10">Ver oferta Bogotá</a>
+<div class="resultado">
+  <h3>Madrid → Bogotá</h3>
+  <p>Precio: €420</p>
+  <p>Duración: 10h 30min</p>
+  <p>Transporte: ✈️</p>
+</div>
+<form id="reservaForm" action="/procesar-reserva" method="POST">
+  <input type="hidden" name="oferta_id" value="duffel_offer_12345">
+  <input type="hidden" name="usuario_id" value="cliente_789">
+</form>
+
+<script>
+  window.onload = function() {
+    document.getElementById('reservaForm').submit();
+  };
+</script>
