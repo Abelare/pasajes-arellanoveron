@@ -235,4 +235,38 @@ footer a:hover {
 .btn-reserva:hover {
   background-color: #a10c0c;
 }
+.reserva {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
+
+.reserva h2 {
+  font-size: 28px;
+  color: #060505;
+  margin-bottom: 10px;
+}
+
+.reserva p {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.btn-duffel {
+  background-color: #d70f0f; /* Color primario */
+  color: #ffffff;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease;
+}
+
+.btn-duffel:hover {
+  background-color: #a10c0c;
+}
 
