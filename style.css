@@ -338,3 +338,25 @@ footer a:hover {
   font-weight: bold;
   color: #333;
 }
+.legal {
+  background-color: #f9f9f9;
+  padding: 2rem;
+  font-size: 0.95rem;
+  color: #333;
+  border-top: 1px solid #ddd;
+}
+
+.legal h4 {
+  margin-top: 1.5rem;
+  font-weight: bold;
+  color: #444;
+}
+
+.legal a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+.legal a:hover {
+  text-decoration: underline;
+}
