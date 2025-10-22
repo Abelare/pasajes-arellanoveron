@@ -311,3 +311,30 @@ footer a:hover {
   border-radius: 4px;
   display: inline-block;
 }
+.testimonial {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-left: 4px solid #0077cc;
+  padding: 1rem;
+  margin: 1rem 0;
+  background-color: #f9f9f9;
+  border-radius: 6px;
+}
+
+.testimonial-img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.testimonial-text {
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+.testimonial-name {
+  font-weight: bold;
+  color: #333;
+}
