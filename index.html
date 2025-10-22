@@ -28,113 +28,121 @@
   </header>
 
   <!-- Buscador -->
- <section class="buscador">
-  <form id="formulario">
-    <div class="tipo-viaje">
-      <label>Tipo de viaje</label>
-      <div class="opciones-viaje">
-        <label><input type="radio" name="viaje" value="ida" checked /> Solo ida</label>
-        <label><input type="radio" name="viaje" value="ida-vuelta" /> Ida y vuelta</label>
+  <section class="buscador">
+    <form id="formulario">
+      <div class="tipo-viaje">
+        <label>Tipo de viaje</label>
+        <div class="opciones-viaje">
+          <label><input type="radio" name="viaje" value="ida" checked /> Solo ida</label>
+          <label><input type="radio" name="viaje" value="ida-vuelta" /> Ida y vuelta</label>
+        </div>
       </div>
-    </div>
 
-    <div>
-      <label for="origen">Origen</label>
-      <input type="text" id="origen" placeholder="Ej. Madrid-Barajas (MAD)" required />
-    </div>
+      <div>
+        <label for="origen">Origen</label>
+        <input type="text" id="origen" placeholder="Ej. Madrid-Barajas (MAD)" required />
+      </div>
 
-    <div>
-      <label for="destino">Destino</label>
-      <input type="text" id="destino" placeholder="Ej. Barcelona (BCN)" required />
-    </div>
+      <div>
+        <label for="destino">Destino</label>
+        <input type="text" id="destino" placeholder="Ej. Barcelona (BCN)" required />
+      </div>
 
-    <div>
-      <label for="fecha">Fecha de salida</label>
-      <input type="date" id="fecha" required />
-    </div>
+      <div>
+        <label for="fecha">Fecha de salida</label>
+        <input type="date" id="fecha" required />
+      </div>
 
-    <div id="fecha-vuelta-container" style="display: none;">
-      <label for="fecha-vuelta">Fecha de vuelta</label>
-      <input type="date" id="fecha-vuelta" />
-    </div>
+      <div id="fecha-vuelta-container" style="display: none;">
+        <label for="fecha-vuelta">Fecha de vuelta</label>
+        <input type="date" id="fecha-vuelta" />
+      </div>
 
-    <div>
-      <label for="tipo">Transporte</label>
-      <select id="tipo">
-        <option value="avion">Avión</option>
-        <option value="tren">Tren</option>
-        <option value="bus">Autobús</option>
-      </select>
-    </div>
+      <div>
+        <label for="tipo">Transporte</label>
+        <select id="tipo">
+          <option value="avion">Avión</option>
+          <option value="tren">Tren</option>
+          <option value="bus">Autobús</option>
+        </select>
+      </div>
 
-    <div class="opciones">
-      <label><input type="checkbox" id="directo" /> Solo directos</label>
-      <label><input type="checkbox" id="hotel" /> Añadir hotel</label>
-    </div>
+      <div class="opciones">
+        <label><input type="checkbox" id="directo" /> Solo directos</label>
+        <label><input type="checkbox" id="hotel" /> Añadir hotel</label>
+      </div>
 
-    <button type="submit">Buscar</button>
-  </form>
-</section>
+      <button type="submit">Buscar</button>
+    </form>
+  </section>
 
   <!-- Resultados -->
   <section id="resultados"></section>
 
+  <!-- Resultado destacado -->
+  <section class="resultado">
+    <h3>Madrid → Bogotá</h3>
+    <p>Precio: €420</p>
+    <p>Duración: 10h 30min</p>
+    <p>Transporte: ✈️</p>
+    <a href="https://tusitio.com/reserva?oferta=12345&origen=MAD&destino=BOG&fecha=2025-11-10" class="btn-reserva">Ver oferta Bogotá</a>
+  </section>
+
+  <!-- Sección de reserva con Duffel -->
+  <section class="reserva">
+    <h2>Reserva tu vuelo a Latinoamérica</h2>
+    <p>Con atención personalizada, soporte en español y garantía de viaje seguro.</p>
+    <a href="https://links.duffel.com?token=U0ZNeU5UWS5nMmdEYlFBQUFCWXdNREF3UVhwU1RrOTJRVzVsYWxOek0ySlFZMHMxYmdZQThVWEpCNW9CWWdBQlVZQS56MzBJaWNuTXNKdjR1MnBXQ0c5ZkpkTHNxQzVIX1FyWmJ1Ry1RVHd2YmFj" target="_blank" class="btn-duffel">
+      ✈️ Reservar vuelo a Latinoamérica
+    </a>
+  </section>
+
   <!-- Preguntas frecuentes -->
- <section class="faq">
-  <h2>Preguntas frecuentes</h2>
-
-  <div class="faq-contenedor">
-    <details>
-      <summary><img src="img/info.jpg" alt="Cómo funciona" class="faq-icon"> ¿Cómo funciona Arellano Travel?</summary>
-      <p>Arellano Travel es un comparador de billetes...</p>
-    </details>
-
-    <details>
-      <summary><img src="img/price.webp" alt="Billete barato" class="faq-icon"> ¿Cómo encuentro el billete más barato?</summary>
-      <p>Utiliza nuestro buscador flexible...</p>
-    </details>
-
-    <details>
-      <summary><img src="img/map.webp" alt="Destino recomendado" class="faq-icon"> ¿A qué destino debería viajar ahora?</summary>
-      <p>Consulta nuestras recomendaciones...</p>
-    </details>
-
-    <details>
-      <summary><img src="img/booking.jpg" alt="Reserva" class="faq-icon"> ¿El billete se reserva con Arellano Travel?</summary>
-      <p>No. Nosotros te mostramos las mejores opciones...</p>
-    </details>
-
-    <details>
-      <summary><img src="img/email.jpg" alt="Confirmación" class="faq-icon"> ¿Qué ocurre después de reservar?</summary>
-      <p>Recibirás la confirmación directamente del proveedor...</p>
-    </details>
-
-    <details>
-      <summary><img src="img/hotel.jpg" alt="Hoteles" class="faq-icon"> ¿También se pueden buscar hoteles?</summary>
-      <p>Sí. Estamos ampliando nuestra plataforma...</p>
-    </details>
-
-    <details>
-      <summary><img src="img/car.jpg" alt="Coches" class="faq-icon"> ¿Y alquileres de coches?</summary>
-      <p>Estamos trabajando para integrar alquiler de coches...</p>
-    </details>
-
-    <details>
-      <summary><img src="img/bell.webp" alt="Alertas" class="faq-icon"> ¿Qué son las alertas de precios?</summary>
-      <p>Son notificaciones que te enviamos cuando el precio baja...</p>
-    </details>
-
-    <details>
-      <summary><img src="img/flex.png" alt="Flexible" class="faq-icon"> ¿Puedo reservar un billete flexible?</summary>
-      <p>Algunos proveedores ofrecen opciones flexibles...</p>
-    </details>
-
-    <details>
-      <summary><img src="img/eco.webp" alt="Sostenible" class="faq-icon"> ¿Puedo reservar billetes con menos emisiones de CO₂?</summary>
-      <p>Sí. Mostramos opciones más sostenibles...</p>
-    </details>
-  </div>
-</section>
+  <section class="faq">
+    <h2>Preguntas frecuentes</h2>
+    <div class="faq-contenedor">
+      <details>
+        <summary><img src="img/info.jpg" alt="Cómo funciona" class="faq-icon"> ¿Cómo funciona Arellano Travel?</summary>
+        <p>Arellano Travel es un comparador de billetes...</p>
+      </details>
+      <details>
+        <summary><img src="img/price.webp" alt="Billete barato" class="faq-icon"> ¿Cómo encuentro el billete más barato?</summary>
+        <p>Utiliza nuestro buscador flexible...</p>
+      </details>
+      <details>
+        <summary><img src="img/map.webp" alt="Destino recomendado" class="faq-icon"> ¿A qué destino debería viajar ahora?</summary>
+        <p>Consulta nuestras recomendaciones...</p>
+      </details>
+      <details>
+        <summary><img src="img/booking.jpg" alt="Reserva" class="faq-icon"> ¿El billete se reserva con Arellano Travel?</summary>
+        <p>No. Nosotros te mostramos las mejores opciones...</p>
+      </details>
+      <details>
+        <summary><img src="img/email.jpg" alt="Confirmación" class="faq-icon"> ¿Qué ocurre después de reservar?</summary>
+        <p>Recibirás la confirmación directamente del proveedor...</p>
+      </details>
+      <details>
+        <summary><img src="img/hotel.jpg" alt="Hoteles" class="faq-icon"> ¿También se pueden buscar hoteles?</summary>
+        <p>Sí. Estamos ampliando nuestra plataforma...</p>
+      </details>
+      <details>
+        <summary><img src="img/car.jpg" alt="Coches" class="faq-icon"> ¿Y alquileres de coches?</summary>
+        <p>Estamos trabajando para integrar alquiler de coches...</p>
+      </details>
+      <details>
+        <summary><img src="img/bell.webp" alt="Alertas" class="faq-icon"> ¿Qué son las alertas de precios?</summary>
+        <p>Son notificaciones que te enviamos cuando el precio baja...</p>
+      </details>
+      <details>
+        <summary><img src="img/flex.png" alt="Flexible" class="faq-icon"> ¿Puedo reservar un billete flexible?</summary>
+        <p>Algunos proveedores ofrecen opciones flexibles...</p>
+      </details>
+      <details>
+        <summary><img src="img/eco.webp" alt="Sostenible" class="faq-icon"> ¿Puedo reservar billetes con menos emisiones de CO₂?</summary>
+        <p>Sí. Mostramos opciones más sostenibles...</p>
+      </details>
+    </div>
+  </section>
 
   <!-- Footer -->
   <footer>
@@ -145,38 +153,4 @@
   <script src="script.js"></script>
 </body>
 </html>
-<a href="https://links.duffel.com?token=U0ZNeU5UWS5nMmdEYlFBQUFCWXdNREF3UVhwU1RrOTJRVzVsYWxOek0ySlFZMHMxYmdZQThVWEpCNW9CWWdBQlVZQS56MzBJaWNuTXNKdjR1MnBXQ0c5ZkpkTHNxQzVIX1FyWmJ1Ry1RVHd2YmFj" target="_blank" class="btn-reserva">
-  Reservar ahora
-</a>
-<a href="https://tusitio.com/reserva?oferta=12345&origen=MAD&destino=BOG&fecha=2025-11-10">Ver oferta Bogotá</a>
-<div class="resultado">
-  <h3>Madrid → Bogotá</h3>
-  <p>Precio: €420</p>
-  <p>Duración: 10h 30min</p>
-  <p>Transporte: ✈️</p>
-</div>
-<form id="reservaForm" action="/procesar-reserva" method="POST">
-  <input type="hidden" name="oferta_id" value="duffel_offer_12345">
-  <input type="hidden" name="usuario_id" value="cliente_789">
-</form>
 
-<script>
-  window.onload = function() {
-    document.getElementById('reservaForm').submit();
-  };
-</script>
-<a href="https://links.duffel.com?token=U0ZNeU5UWS5nMmdEYlFBQUFCWXdNREF3UVhwU1RrOTJRVzVsYWxOek0ySlFZMHMxYmdZQThVWEpCNW9CWWdBQlVZQS56MzBJaWNuTXNKdjR1MnBXQ0c5ZkpkTHNxQzVIX1FyWmJ1Ry1RVHd2YmFj" target="_blank" class="btn-reserva">
-  Reservar ahora
-</a>
-<section class="reserva">
-  <h2>Reserva tu vuelo a Latinoamérica</h2>
-  <p>Con atención personalizada, soporte en español y garantía de viaje seguro.</p>
-  <a href="https://links.duffel.com?token=..." target="_blank" class="btn-reserva">Ver opciones de vuelo</a>
-</section>
-<section class="reserva">
-  <h2>Reserva tu vuelo a Latinoamérica</h2>
-  <p>Con atención personalizada, soporte en español y garantía de viaje seguro.</p>
-  <a href="https://links.duffel.com?token=U0ZNeU5UWS5nMmdEYlFBQUFCWXdNREF3UVhwU1RrOTJRVzVsYWxOek0ySlFZMHMxYmdZQThVWEpCNW9CWWdBQlVZQS56MzBJaWNuTXNKdjR1MnBXQ0c5ZkpkTHNxQzVIX1FyWmJ1Ry1RVHd2YmFj" target="_blank" class="btn-duffel">
-    ✈️ Reservar vuelo a Latinoamérica
-  </a>
-</section>
