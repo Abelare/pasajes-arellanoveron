@@ -57,3 +57,24 @@ document.getElementById("formulario").addEventListener("submit", function (e) {
 
   document.getElementById("resultados").innerHTML = html;
 });
+document.getElementById('form-contacto')?.addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  const nombre = document.getElementById('nombre').value;
+  const email = document.getElementById('email').value;
+  const mensaje = document.getElementById('mensaje').value;
+
+  try {
+    const res = await fetch('http://localhost:3000/api/contacto/enviar', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ nombre, email, mensaje })
+    });
+
+    const data = await res.json();
+    alert(data.mensaje || 'Mensaje enviado correctamente');
+  } catch (error) {
+    alert('Error al enviar el mensaje');
+    console.error('❌ Error:', error);
+  }
+});
