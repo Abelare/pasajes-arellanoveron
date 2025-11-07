@@ -33,19 +33,41 @@
 }
 
 /* ------------------ Hero principal ------------------ */
-header {
-  text-align: center;
-  padding: 2rem 1rem;
+.hero {
   background: linear-gradient(to right, #c8102e, #e60000);
   color: white;
+  padding: 4rem 2rem;
+  text-align: center;
 }
 
-header h1 {
-  font-size: 2.5rem;
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-header p {
-  font-size: 1.2rem;
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+.hero .btn-duffel {
+  background-color: #ffffff;
+  color: #c8102e;
+  padding: 0.8rem 2rem;
+  font-weight: 600;
+  border-radius: 8px;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.hero .btn-duffel:hover {
+  background-color: #f2f2f2;
 }
 
 /* ------------------ Buscador ------------------ */
@@ -190,13 +212,13 @@ button[type="submit"]:hover {
 }
 
 .reserva h2 {
-  font-size: 28px;
+  font-size: 2rem;
   color: #060505;
   margin-bottom: 10px;
 }
 
 .reserva p {
-  font-size: 16px;
+  font-size: 1.1rem;
   color: #333;
   margin-bottom: 20px;
 }
@@ -342,31 +364,4 @@ footer a:hover {
 .legal h4 {
   margin-top: 1.5rem;
   font-weight: bold;
-  color: #444;
-}
-
-.legal a {
-  color: #0077cc;
-  text-decoration: none;
-}
-
-.legal a:hover {
-  text-decoration: underline;
-}
-
-/* ------------------ Formulario de contacto ------------------ */
-.contacto {
-  background-color: #fff8f0;
-  padding: 2rem;
-  margin-top: 3rem;
-  text-align: center;
-}
-
-.contacto h2 {
-  font-size: 2rem;
-  color: #c8102e;
-  margin-bottom: 1rem;
-}
-
-#form-contacto {
-  max-width: 600px;
+  color: #
