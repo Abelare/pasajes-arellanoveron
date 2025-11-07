@@ -266,6 +266,52 @@ summary {
   border-radius: 4px;
 }
 
+/* ------------------ Confianza y seguridad ------------------ */
+.confianza {
+  background-color: #fff;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.confianza h2 {
+  font-size: 2rem;
+  color: #c8102e;
+  margin-bottom: 2rem;
+}
+
+.confianza-contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.confianza-item {
+  max-width: 280px;
+  background-color: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.confianza-item img {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 1rem;
+}
+
+.confianza-item h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.confianza-item p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
 /* ------------------ Footer ------------------ */
 footer {
   background-color: #f2f2f2;
@@ -324,44 +370,4 @@ footer a:hover {
 }
 
 /* ------------------ Testimonios ------------------ */
-.testimonial {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  border-left: 4px solid #0077cc;
-  padding: 1rem;
-  margin: 1rem 0;
-  background-color: #f9f9f9;
-  border-radius: 6px;
-}
-
-.testimonial-img {
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.testimonial-text {
-  font-style: italic;
-  margin-bottom: 0.5rem;
-}
-
-.testimonial-name {
-  font-weight: bold;
-  color: #333;
-}
-
-/* ------------------ Legal ------------------ */
-.legal {
-  background-color: #f9f9f9;
-  padding: 2rem;
-  font-size: 0.95rem;
-  color: #333;
-  border-top: 1px solid #ddd;
-}
-
-.legal h4 {
-  margin-top: 1.5rem;
-  font-weight: bold;
-  color: #
+.testimonial
