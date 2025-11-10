@@ -8,7 +8,7 @@
 
 .nav-logo-restaurado img {
   height: 100px;
-  filter: brightness(0);
+  /* filter: brightness(0); */
   margin-top: -5px;
   margin-bottom: -5px;
 }
