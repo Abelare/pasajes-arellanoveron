@@ -1,373 +1,98 @@
-/* ------------------ Navegación ------------------ */
-.nav-logo-restaurado {
-  position: relative;
-  background-color: #c8102e;
-  padding: 0.3rem 0;
-  text-align: center;
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background-color: #fff;
+  color: #333;
 }
 
-.nav-logo-restaurado img {
-  height: 100px;
-  /* filter: brightness(0); */
-  margin-top: -5px;
-  margin-bottom: -5px;
+nav.nav-logo-restaurado {
+  background-color: #d60000;
+  padding: 10px 20px;
+  color: white;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .nav-links {
-  position: absolute;
-  top: 10px;
-  right: 20px;
+  list-style: none;
   display: flex;
-  gap: 1rem;
+  gap: 15px;
 }
 
-.nav-links a {
+.nav-links li a {
   color: white;
   text-decoration: none;
   font-weight: 600;
-  font-size: 1rem;
 }
 
-.nav-links a:hover {
-  text-decoration: underline;
-}
-
-/* ------------------ Hero principal ------------------ */
-.hero {
-  background: linear-gradient(to right, #c8102e, #e60000);
+.user-options {
   color: white;
-  padding: 4rem 2rem;
-  text-align: center;
+  font-size: 14px;
 }
 
-.hero-content {
-  max-width: 800px;
-  margin: 0 auto;
+.hero {
+  background-color: #d60000;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
 }
 
 .hero h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
-.hero p {
-  font-size: 1.3rem;
-  margin-bottom: 2rem;
-}
-
-.hero .btn-duffel {
-  background-color: #ffffff;
-  color: #c8102e;
-  padding: 0.8rem 2rem;
-  font-weight: 600;
-  border-radius: 8px;
-  font-size: 1rem;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-}
-
-.hero .btn-duffel:hover {
-  background-color: #f2f2f2;
-}
-
-/* ------------------ Buscador ------------------ */
-.buscador {
-  background-color: #fff8f0;
-  padding: 2rem;
-  display: grid;
-  place-items: center;
-}
-
-form {
-  background-color: #fff;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  width: 100%;
-  max-width: 800px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  justify-content: space-between;
-}
-
-.form-group {
-  flex: 1 1 45%;
-  display: flex;
-  flex-direction: column;
-}
-
-.form-actions {
-  flex: 1 1 100%;
-  display: flex;
-  justify-content: center;
-}
-
-form label {
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  color: #c8102e;
-}
-
-form input,
-form select {
-  padding: 0.6rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 1rem;
-}
-
-button[type="submit"] {
-  padding: 0.8rem 2rem;
-  background-color: #c8102e;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-weight: 600;
-  font-size: 1rem;
-  cursor: pointer;
-}
-
-button[type="submit"]:hover {
-  background-color: #a60c24;
-}
-
-#fecha-vuelta-container {
-  transition: all 0.3s ease;
-}
-
-/* ------------------ Resultados ------------------ */
-#resultados {
-  padding: 2rem;
-  display: grid;
-  gap: 1.5rem;
-}
-
-.card {
-  background-color: #fff;
-  border-left: 6px solid #c8102e;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  padding: 1.5rem;
-  display: grid;
-  grid-template-columns: 80px 1fr;
-  gap: 1rem;
-  align-items: center;
-}
-
-.card img {
-  width: 60px;
-  height: 60px;
-  object-fit: contain;
-}
-
-.card h3 {
-  margin: 0;
-  font-size: 1.2rem;
-  color: #c8102e;
-}
-
-.card p {
-  margin: 0.2rem 0;
-  font-size: 1rem;
-  color: #333;
-}
-
-.card p:last-child {
-  font-weight: 600;
-  color: #a60c24;
-}
-
-/* ------------------ Botones de reserva ------------------ */
-.btn-reserva,
-.btn-duffel {
-  background-color: #d70f0f;
-  color: #ffffff;
-  padding: 12px 24px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: bold;
-  display: inline-block;
-  transition: background-color 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  font-size: 16px;
-}
-
-.btn-duffel {
-  padding: 14px 28px;
-  border-radius: 8px;
-  font-size: 18px;
-}
-
-.btn-reserva:hover,
-.btn-duffel:hover {
-  background-color: #a10c0c;
-}
-
-/* ------------------ Sección de reserva ------------------ */
-.reserva {
-  text-align: center;
-  padding: 40px 20px;
-  background-color: #f9f9f9;
-}
-
-.reserva h2 {
-  font-size: 2rem;
-  color: #060505;
+  font-size: 2em;
   margin-bottom: 10px;
 }
 
-.reserva p {
-  font-size: 1.1rem;
-  color: #333;
+.hero p {
+  font-size: 1.2em;
   margin-bottom: 20px;
 }
 
-/* ------------------ Preguntas frecuentes ------------------ */
-.faq {
-  background-color: #f9f9f9;
-  padding: 2rem;
-  text-align: center;
+.btn-duffel {
+  background-color: white;
+  color: #d60000;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-.faq h2 {
-  margin-bottom: 2rem;
-  color: #c8102e;
-  font-size: 2rem;
-}
-
-.faq-contenedor {
-  display: grid;
-  gap: 1rem;
+.buscador {
+  background-color: #fff;
+  padding: 30px 20px;
   max-width: 800px;
   margin: 0 auto;
-  text-align: left;
 }
 
-details {
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  padding: 1rem;
-  background-color: #fff;
-}
-
-summary {
-  font-weight: 600;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-}
-
-.faq-icon {
-  width: 28px;
-  height: 28px;
-  object-fit: contain;
-  border-radius: 4px;
-}
-
-/* ------------------ Confianza y seguridad ------------------ */
-.confianza {
-  background-color: #fff;
-  padding: 3rem 2rem;
-  text-align: center;
-}
-
-.confianza h2 {
-  font-size: 2rem;
-  color: #c8102e;
-  margin-bottom: 2rem;
-}
-
-.confianza-contenedor {
+.form-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
+  gap: 10px;
 }
 
-.confianza-item {
-  max-width: 280px;
-  background-color: #f9f9f9;
-  padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  text-align: center;
+.form-row input,
+.form-row select {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
-.confianza-item img {
-  width: 48px;
-  height: 48px;
-  margin-bottom: 1rem;
-}
-
-.confianza-item h3 {
-  font-size: 1.2rem;
-  color: #333;
-  margin-bottom: 0.5rem;
-}
-
-.confianza-item p {
-  font-size: 0.95rem;
-  color: #555;
-}
-
-/* ------------------ Footer ------------------ */
-footer {
-  background-color: #f2f2f2;
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
-}
-
-footer a {
-  color: #c8102e;
-  text-decoration: none;
-  margin: 0 0.5rem;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
-/* ------------------ Tarjetas de destino ------------------ */
-.card-image {
-  width: 100%;
-  height: auto;
-}
-
-.card-content {
-  padding: 1rem;
-}
-
-.card-title {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-}
-
-.card-info {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  font-size: 0.9rem;
-  margin-bottom: 1rem;
-}
-
-.icon {
-  width: 16px;
-  height: 16px;
-  vertical-align: middle;
-  margin-right: 4px;
-}
-
-.card-button {
-  background-color: #0077cc;
+.btn-buscar {
+  background-color: #d60000;
   color: white;
-  padding: 0.5rem 1rem;
-  text-decoration: none;
-  border-radius: 4px;
-  display: inline-block;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-/* ------------------ Testimonios ------------------ */
-.testimonial
+.form-options {
+  margin-top: 15px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
