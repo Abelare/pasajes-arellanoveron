@@ -96,3 +96,61 @@ nav.nav-logo-restaurado {
   gap: 15px;
   flex-wrap: wrap;
 }
+.oferta-destacada {
+  background-color: #fff;
+  padding: 30px;
+  text-align: center;
+}
+
+.oferta-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.btn-reserva {
+  background-color: #d60000;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.garantia {
+  font-size: 0.9em;
+  color: #555;
+  margin-top: 10px;
+}
+
+.confianza-mejorada {
+  background-color: #f9f9f9;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.confianza-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.confianza-item {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 300px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.confianza-item img {
+  width: 50px;
+  margin-bottom: 10px;
+}
