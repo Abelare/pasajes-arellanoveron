@@ -169,4 +169,54 @@
   <script src="script.js"></script>
 </body>
 </html>
+<!-- Navegación -->
+<nav class="nav-logo-restaurado">
+  <div class="nav-container">
+    <img src="img/logo-blanco.png" alt="Logo Arellano Travel" />
+    <ul class="nav-links">
+      <li><a href="#">Descubre</a></li>
+      <li><a href="#">Ofertas</a></li>
+      <li><a href="#">Rutas de tren</a></li>
+      <li><a href="#">Ayuda</a></li>
+      <li><a href="#">Mis viajes</a></li>
+    </ul>
+    <div class="user-options">
+      <span>ES | EUR</span>
+      <a href="#">Iniciar sesión</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero principal -->
+<header class="hero">
+  <div class="hero-content">
+    <h1>Reserva tu billete en avión, tren o autobús a más de 100 países</h1>
+    <p>Con total seguridad y confianza. ¡Tu viaje empieza aquí!</p>
+    <a href="#formulario" class="btn-duffel">🚆🚌✈️ Comenzar búsqueda</a>
+  </div>
+</header>
+
+<!-- Buscador -->
+<section class="buscador">
+  <form id="formulario">
+    <div class="form-row">
+      <input type="text" id="origen" placeholder="Lugar de origen" required />
+      <input type="text" id="destino" placeholder="Lugar de destino" required />
+      <input type="date" id="fecha" required />
+      <select id="tipo">
+        <option value="avion">Avión</option>
+        <option value="tren">Tren</option>
+        <option value="bus">Autobús</option>
+      </select>
+      <button type="submit" class="btn-buscar">Buscar</button>
+    </div>
+    <div class="form-options">
+      <label><input type="radio" name="viaje" value="ida" checked /> Solo ida</label>
+      <label><input type="radio" name="viaje" value="ida-vuelta" /> Ida y vuelta</label>
+      <label><input type="checkbox" id="directo" /> Solo directos</label>
+      <label><input type="checkbox" id="hotel" /> Añadir hotel</label>
+    </div>
+  </form>
+</section>
+
 
