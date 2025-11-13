@@ -1,49 +1,146 @@
-<!-- Navegación -->
-<nav class="nav-logo-restaurado">
-  <div class="nav-container">
-    <img src="img/logo-blanco.png" alt="Logo Arellano Travel" />
-    <ul class="nav-links">
-      <li><a href="#">Descubre</a></li>
-      <li><a href="#">Ofertas</a></li>
-      <li><a href="#">Rutas de tren</a></li>
-      <li><a href="#">Ayuda</a></li>
-      <li><a href="#">Mis viajes</a></li>
-    </ul>
-    <div class="user-options">
-      <span>ES | EUR</span>
-      <a href="#">Iniciar sesión</a>
-    </div>
-  </div>
-</nav>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arellano Travel - Comparador de billetes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-<!-- Hero principal -->
-<header class="hero">
-  <div class="hero-content">
-    <h1>Reserva tu billete en avión, tren o autobús a más de 100 países</h1>
-    <p>Con total seguridad y confianza. ¡Tu viaje empieza aquí!</p>
-    <a href="#formulario" class="btn-duffel">🚆🚌✈️ Comenzar búsqueda</a>
-  </div>
-</header>
+  <!-- 🔄 REEMPLAZADO: Encabezado estilo Omio -->
+  <nav class="nav-logo-restaurado">
+    <div class="nav-container">
+      <img src="img/logo-blanco.png" alt="Logo Arellano Travel" />
+      <ul class="nav-links">
+        <li><a href="#">Descubre</a></li>
+        <li><a href="#">Ofertas</a></li>
+        <li><a href="#">Rutas de tren</a></li>
+        <li><a href="#">Ayuda</a></li>
+        <li><a href="#">Mis viajes</a></li>
+      </ul>
+      <div class="user-options">
+        <span>ES | EUR</span>
+        <a href="#">Iniciar sesión</a>
+      </div>
+    </div>
+  </nav>
 
-<!-- Buscador -->
-<section class="buscador">
-  <form id="formulario">
-    <div class="form-row">
-      <input type="text" id="origen" placeholder="Lugar de origen" required />
-      <input type="text" id="destino" placeholder="Lugar de destino" required />
-      <input type="date" id="fecha" required />
-      <select id="tipo">
-        <option value="avion">Avión</option>
-        <option value="tren">Tren</option>
-        <option value="bus">Autobús</option>
-      </select>
-      <button type="submit" class="btn-buscar">Buscar</button>
+  <!-- 🔄 REEMPLAZADO: Hero principal -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Reserva tu billete en avión, tren o autobús a más de 100 países</h1>
+      <p>Con total seguridad y confianza. ¡Tu viaje empieza aquí!</p>
+      <a href="#formulario" class="btn-duffel">🚆🚌✈️ Comenzar búsqueda</a>
     </div>
-    <div class="form-options">
-      <label><input type="radio" name="viaje" value="ida" checked /> Solo ida</label>
-      <label><input type="radio" name="viaje" value="ida-vuelta" /> Ida y vuelta</label>
-      <label><input type="checkbox" id="directo" /> Solo directos</label>
-      <label><input type="checkbox" id="hotel" /> Añadir hotel</label>
+  </header>
+
+  <!-- 🔄 REEMPLAZADO: Buscador estilo Omio -->
+  <section class="buscador">
+    <form id="formulario">
+      <div class="form-row">
+        <input type="text" id="origen" placeholder="Lugar de origen" required />
+        <input type="text" id="destino" placeholder="Lugar de destino" required />
+        <input type="date" id="fecha" required />
+        <select id="tipo">
+          <option value="avion">Avión</option>
+          <option value="tren">Tren</option>
+          <option value="bus">Autobús</option>
+        </select>
+        <button type="submit" class="btn-buscar">Buscar</button>
+      </div>
+      <div class="form-options">
+        <label><input type="radio" name="viaje" value="ida" checked /> Solo ida</label>
+        <label><input type="radio" name="viaje" value="ida-vuelta" /> Ida y vuelta</label>
+        <label><input type="checkbox" id="directo" /> Solo directos</label>
+        <label><input type="checkbox" id="hotel" /> Añadir hotel</label>
+      </div>
+    </form>
+  </section>
+
+  <!-- ✅ MANTENIDO: Resultados -->
+  <section id="resultados"></section>
+  <section class="resultado">
+    <h3>Madrid → Bogotá</h3>
+    <p>Precio: €420</p>
+    <p>Duración: 10h 30min</p>
+    <p>Transporte: ✈️</p>
+    <a href="https://tusitio.com/reserva?oferta=12345&origen=MAD&destino=BOG&fecha=2025-11-10" class="btn-reserva">Ver oferta Bogotá</a>
+  </section>
+
+  <!-- ✅ MANTENIDO: Sección de reserva -->
+  <section class="reserva">
+    <h2>¿Listo para explorar el mundo?</h2>
+    <p>Con atención personalizada, soporte en español y garantía de viaje seguro.</p>
+    <a href="https://links.duffel.com?token=..." target="_blank" class="btn-duffel">
+      ✈️ Explora destinos globales
+    </a>
+  </section>
+
+  <!-- ✅ MANTENIDO: Preguntas frecuentes -->
+  <section class="faq">
+    <h2>Preguntas frecuentes</h2>
+    <div class="faq-contenedor">
+      <!-- Aquí van los <details> como los tenías -->
     </div>
-  </form>
-</section>
+  </section>
+
+  <!-- ✅ MANTENIDO: Confianza y seguridad -->
+  <section class="confianza">
+    <h2>Tu seguridad es nuestra prioridad</h2>
+    <div class="confianza-contenedor">
+      <div class="confianza-item">
+        <img src="img/ssl.png" alt="SSL Seguro" />
+        <h3>Conexión segura</h3>
+        <p>Tu información está protegida con cifrado SSL de nivel bancario.</p>
+      </div>
+      <div class="confianza-item">
+        <img src="img/stripe.png" alt="Pagos con Stripe" />
+        <h3>Pagos protegidos</h3>
+        <p>Procesamos tus pagos con Stripe, líder mundial en seguridad financiera.</p>
+      </div>
+      <div class="confianza-item">
+        <img src="img/soporte.png" alt="Soporte en español e inglés" />
+        <h3>Soporte en español e inglés</h3>
+        <p>Estamos aquí para ayudarte antes, durante y después de tu viaje, en el idioma que prefieras.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ✅ MANTENIDO: Formulario de contacto -->
+  <section class="contacto">
+    <h2>Contáctanos</h2>
+    <form id="form-contacto">
+      <label for="nombre">Nombre</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="email">Correo electrónico</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="mensaje">Mensaje</label>
+      <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+      <button type="submit">Enviar mensaje</button>
+    </form>
+  </section>
+
+  <!-- ✅ MANTENIDO: Footer -->
+  <footer>
+    <p>&copy; 2025 Arellano Travel. Todos los derechos reservados.</p>
+    <p><a href="#">Aviso legal</a> | <a href="#">Política de privacidad</a></p>
+    <div class="legal">
+      <h4>Aviso Legal</h4>
+      <p>Arellano Travel es una marca operada por MAGServices...</p>
+
+      <h4>Política de Privacidad</h4>
+      <p>No compartimos datos personales con terceros...</p>
+
+      <h4>Contacto</h4>
+      <p>Para consultas legales o de privacidad, escríbenos a <a href="mailto:legal@arellanotravel.com">legal@arellanotravel.com</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
