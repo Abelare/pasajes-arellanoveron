@@ -38,31 +38,35 @@ nav.nav-logo-restaurado {
   background-color: #d60000;
   color: white;
   text-align: center;
-  padding: 15px 10px; /* antes 30px o más */
-  margin-top: 0;
+  padding: 10px 10px;   /* reducido al mínimo */
+  margin: 0;            /* elimina cualquier margen externo */
+}
+
+.hero-content {
+  margin: 0 auto;
+  padding: 0;
 }
 
 .hero-content h1 {
-  font-size: 1.8rem;
-  margin-bottom: 8px;
+  font-size: 1.6rem;
+  margin: 5px 0;
 }
 
 .hero-content p {
-  font-size: 1.1rem;
-  margin-bottom: 15px;
+  font-size: 1rem;
+  margin: 5px 0 10px 0;
 }
 
 .btn-duffel {
   background-color: white;
   color: #d60000;
-  padding: 8px 16px;
+  padding: 6px 14px;
   border-radius: 20px;
   font-weight: bold;
   text-decoration: none;
   display: inline-block;
   margin-top: 5px;
 }
-
 
 .buscador {
   background-color: #fff;
