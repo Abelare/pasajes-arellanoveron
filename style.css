@@ -154,3 +154,61 @@ nav.nav-logo-restaurado {
   width: 50px;
   margin-bottom: 10px;
 }
+.nav-logo-restaurado {
+  background-color: #d60000;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.logo {
+  height: 40px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.user-options {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.idioma {
+  color: white;
+  font-size: 14px;
+}
+
+.btn-sesion {
+  background-color: white;
+  color: #d60000;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-sesion:hover {
+  background-color: #f2f2f2;
+}
