@@ -172,7 +172,9 @@ nav.nav-logo-restaurado {
 
 .logo {
   height: 150px;
+  width: auto;
   max-width: 350px;
+  object-fit: contain;
 }
 
 .nav-links {
