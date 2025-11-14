@@ -9,34 +9,34 @@
 </head>
 <body>
 
-  <!-- 🔄 REEMPLAZADO: Encabezado estilo Omio -->
- <nav class="nav-logo-restaurado">
-  <div class="nav-container">
-    <img src="img/logo.png" alt="Logo Arellano Travel" class="logo" />
-    <ul class="nav-links">
-      <li><a href="#">Descubre</a></li>
-      <li><a href="#">Ofertas</a></li>
-      <li><a href="#">Rutas de tren</a></li>
-      <li><a href="#">Ayuda</a></li>
-      <li><a href="#">Mis viajes</a></li>
-    </ul>
-    <div class="user-options">
-      <span class="idioma">ES | EUR</span>
-      <a href="#" class="btn-sesion">Iniciar sesión</a>
+  <!-- 🔄 Encabezado corregido -->
+  <nav class="nav-logo-restaurado" style="padding: 5px 10px;">
+    <div class="nav-container" style="display: flex; justify-content: space-between; align-items: center;">
+      <img src="img/logo.png" alt="Logo Arellano Travel" class="logo" style="height: 80px; width: auto;" />
+      <ul class="nav-links" style="display: flex; gap: 20px; list-style: none; margin: 0;">
+        <li><a href="#">Descubre</a></li>
+        <li><a href="#">Ofertas</a></li>
+        <li><a href="#">Rutas de tren</a></li>
+        <li><a href="#">Ayuda</a></li>
+        <li><a href="#">Mis viajes</a></li>
+      </ul>
+      <div class="user-options" style="display: flex; align-items: center; gap: 10px;">
+        <span class="idioma">ES | EUR</span>
+        <a href="#" class="btn-sesion" style="background-color: white; color: #d60000; padding: 8px 16px; border-radius: 20px; font-weight: bold; text-decoration: none;">Iniciar sesión</a>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
-  <!-- 🔄 REEMPLAZADO: Hero principal -->
-  <header class="hero">
+  <!-- 🔄 Hero corregido -->
+  <header class="hero" style="background-color: #d60000; color: white; text-align: center; padding: 5px 10px; margin: 0;">
     <div class="hero-content">
-      <h1>Reserva tu billete en avión, tren o autobús a más de 100 países</h1>
-      <p>Con total seguridad y confianza. ¡Tu viaje empieza aquí!</p>
-      <a href="#formulario" class="btn-duffel">🚆🚌✈️ Comenzar búsqueda</a>
+      <h1 style="font-size: 1.5rem; margin: 4px 0;">Reserva tu billete en avión, tren o autobús a más de 100 países</h1>
+      <p style="font-size: 1rem; margin: 4px 0 8px 0;">Con total seguridad y confianza. ¡Tu viaje empieza aquí!</p>
+      <a href="#formulario" class="btn-duffel" style="background-color: white; color: #d60000; padding: 6px 14px; border-radius: 20px; font-weight: bold; text-decoration: none; display: inline-block; margin-top: 4px;">🚆🚌✈️ Comenzar búsqueda</a>
     </div>
   </header>
 
-  <!-- 🔄 REEMPLAZADO: Buscador estilo Omio -->
+  <!-- 🔄 Buscador -->
   <section class="buscador">
     <form id="formulario">
       <div class="form-row">
@@ -59,9 +59,9 @@
     </form>
   </section>
 
-  <!-- ✅ MANTENIDO: Resultados -->
+  <!-- ✅ Resultados con padding izquierdo -->
   <section id="resultados"></section>
-  <section class="resultado">
+  <section class="resultado" style="padding-left: 5px;">
     <h3>Madrid → Bogotá</h3>
     <p>Precio: €420</p>
     <p>Duración: 10h 30min</p>
@@ -69,16 +69,14 @@
     <a href="https://tusitio.com/reserva?oferta=12345&origen=MAD&destino=BOG&fecha=2025-11-10" class="btn-reserva">Ver oferta Bogotá</a>
   </section>
 
-  <!-- ✅ MANTENIDO: Sección de reserva -->
+  <!-- ✅ Sección de reserva -->
   <section class="reserva">
     <h2>¿Listo para explorar el mundo?</h2>
     <p>Con atención personalizada, soporte en español y garantía de viaje seguro.</p>
-    <a href="https://links.duffel.com?token=..." target="_blank" class="btn-duffel">
-      ✈️ Explora destinos globales
-    </a>
+    <a href="https://links.duffel.com?token=..." target="_blank" class="btn-duffel">✈️ Explora destinos globales</a>
   </section>
 
-  <!-- ✅ MANTENIDO: Preguntas frecuentes -->
+  <!-- ✅ Preguntas frecuentes -->
   <section class="faq">
     <h2>Preguntas frecuentes</h2>
     <div class="faq-contenedor">
@@ -86,7 +84,7 @@
     </div>
   </section>
 
-  <!-- ✅ MANTENIDO: Confianza y seguridad -->
+  <!-- ✅ Confianza y seguridad -->
   <section class="confianza">
     <h2>Tu seguridad es nuestra prioridad</h2>
     <div class="confianza-contenedor">
@@ -108,73 +106,39 @@
     </div>
   </section>
 
-  <!-- ✅ MANTENIDO: Formulario de contacto -->
+  <!-- ✅ Formulario de contacto -->
   <section class="contacto">
     <h2>Contáctanos</h2>
     <form id="form-contacto">
       <label for="nombre">Nombre</label>
       <input type="text" id="nombre" name="nombre" required>
-
       <label for="email">Correo electrónico</label>
       <input type="email" id="email" name="email" required>
-
       <label for="mensaje">Mensaje</label>
       <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
-
       <button type="submit">Enviar mensaje</button>
     </form>
   </section>
 
-  <!-- ✅ MANTENIDO: Footer -->
+  <!-- ✅ Footer -->
   <footer>
     <p>&copy; 2025 Arellano Travel. Todos los derechos reservados.</p>
     <p><a href="#">Aviso legal</a> | <a href="#">Política de privacidad</a></p>
     <div class="legal">
       <h4>Aviso Legal</h4>
       <p>Arellano Travel es una marca operada por MAGServices...</p>
-
       <h4>Política de Privacidad</h4>
       <p>No compartimos datos personales con terceros...</p>
-
       <h4>Contacto</h4>
       <p>Para consultas legales o de privacidad, escríbenos a <a href="mailto:legal@arellanotravel.com">legal@arellanotravel.com</a></p>
     </div>
   </footer>
 
-  <script src="script.js"></script>
-</body>
-</html>
-<!-- 🔥 Oferta destacada profesional -->
-<section class="oferta-destacada">
-  <div class="oferta-card">
-    <h2>✈️ Madrid → Bogotá</h2>
-    <p><strong>Precio:</strong> €420</p>
-    <p><strong>Duración:</strong> 10h 30min</p>
-    <p><strong>Transporte:</strong> Vuelo directo con Iberia</p>
-    <a href="https://tusitio.com/reserva?oferta=12345&origen=MAD&destino=BOG&fecha=2025-11-10" class="btn-reserva">Ver oferta segura</a>
-    <p class="garantia">✔️ Reserva protegida por Stripe y conexión SSL</p>
-  </div>
-</section>
-
-<!-- 🛡️ Confianza y seguridad visual -->
-<section class="confianza-mejorada">
-  <h2>Tu seguridad es nuestra prioridad</h2>
-  <div class="confianza-grid">
-    <div class="confianza-item">
-      <img src="img/ssl.png" alt="SSL Seguro" />
-      <h3>🔒 Conexión segura</h3>
-      <p>Toda tu información está cifrada con tecnología SSL de nivel bancario.</p>
-    </div>
-    <div class="confianza-item">
-      <img src="img/stripe.png" alt="Pagos con Stripe" />
-      <h3>💳 Pagos protegidos</h3>
-      <p>Procesamos tus pagos con Stripe, líder mundial en seguridad financiera.</p>
-    </div>
-    <div class="confianza-item">
-      <img src="img/soporte.png" alt="Soporte en español e inglés" />
-      <h3>🧑‍💼 Soporte personalizado</h3>
-      <p>Estamos contigo antes, durante y después del viaje. En español e inglés.</p>
-    </div>
-  </div>
-</section>
-
+  <!-- ✅ Oferta destacada -->
+  <section class="oferta-destacada" style="padding-left: 5px;">
+    <div class="oferta-card">
+      <h2>✈️ Madrid → Bogotá</h2>
+      <p><strong>Precio:</strong> €420</p>
+      <p><strong>Duración:</strong> 10h 30min</p>
+      <p><strong>Transporte:</strong> Vuelo directo con Iberia</p>
+      <a href="https://tusitio.com/reserva?oferta=12345&origen=MAD&destino=BOG&fecha=2025-
