@@ -28,45 +28,28 @@
   </nav>
 
   <!-- Hero reducido y sin botón -->
-<header class="hero" style="background-color: #d60000; color: white; text-align: center; padding: 10px 10px; margin: 0;">
-  <div class="hero-content">
-    <h1 style="font-size: 1.4rem; margin: 4px 0;">Reserva tu billete en avión, tren o autobús a más de 100 países</h1>
-    <p style="font-size: 1rem; margin: 4px 0;">Reserva billetes de tren, autobús, avión y ferry con total confianza</p>
-  </div>
-</header>
-
-  <!-- Buscador global estilo Omio -->
-<section class="buscador-global" style="
-  background-color: #d60000;
-  color: white;
-  padding: 20px 10px;
-  text-align: center;
-">
-  <h2 style="font-size: 1.8rem; margin-bottom: 10px;">🌍 Viajes globales desde un único lugar</h2>
-  <p style="font-size: 1rem; margin-bottom: 20px;">Reserva billetes de tren, autobús, avión y ferry con total confianza</p>
-
-  <form id="formulario-global" style="max-width: 800px; margin: 0 auto;">
-    <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
-      <input type="text" placeholder="Desde: Ciudad, estación o aeropuerto" required style="flex: 1; padding: 10px; border-radius: 8px; border: none;" />
-      <input type="text" placeholder="A: Ciudad, estación o aeropuerto" required style="flex: 1; padding: 10px; border-radius: 8px; border: none;" />
-      <input type="date" required style="padding: 10px; border-radius: 8px; border: none;" />
-      <button type="submit" style="
-        background-color: white;
-        color: #d60000;
-        padding: 10px 20px;
-        border-radius: 25px;
-        font-weight: bold;
-        border: none;
-        cursor: pointer;
-      ">🔍 Buscar</button>
+  <header class="hero" style="background-color: #d60000; color: white; text-align: center; padding: 10px 10px; margin: 0;">
+    <div class="hero-content">
+      <h1 style="font-size: 1.4rem; margin: 4px 0;">Reserva tu billete en avión, tren o autobús a más de 100 países</h1>
+      <p style="font-size: 1rem; margin: 4px 0;">Reserva billetes de tren, autobús, avión y ferry con total confianza</p>
     </div>
-    <div style="margin-top: 15px;">
-      <label><input type="checkbox" /> Añadir vuelta</label>
-      <label style="margin-left: 15px;"><input type="checkbox" /> Sin tarjeta de descuento</label>
-    </div>
-  </form>
-</section>
+  </header>
 
+  <!-- Buscador funcional -->
+  <section class="buscador-global" style="background-color: #d60000; color: white; padding: 20px 10px; text-align: center;">
+    <form id="formulario-global" style="max-width: 800px; margin: 0 auto;">
+      <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
+        <input type="text" placeholder="Desde: Ciudad, estación o aeropuerto" required style="flex: 1; padding: 10px; border-radius: 8px; border: none;" />
+        <input type="text" placeholder="A: Ciudad, estación o aeropuerto" required style="flex: 1; padding: 10px; border-radius: 8px; border: none;" />
+        <input type="date" required style="padding: 10px; border-radius: 8px; border: none;" />
+        <button type="submit" style="background-color: white; color: #d60000; padding: 10px 20px; border-radius: 25px; font-weight: bold; border: none; cursor: pointer;">🔍 Buscar</button>
+      </div>
+      <div style="margin-top: 15px;">
+        <label><input type="checkbox" /> Añadir vuelta</label>
+        <label style="margin-left: 15px;"><input type="checkbox" /> Sin tarjeta de descuento</label>
+      </div>
+    </form>
+  </section>
 
   <!-- Resultados -->
   <section id="resultados"></section>
@@ -94,42 +77,38 @@
   </section>
 
   <!-- Confianza y seguridad -->
-<section class="confianza" style="padding-left: 5px;">
-  <h2>Tu seguridad es nuestra prioridad</h2>
-  <div class="confianza-contenedor">
-    <div class="confianza-item">
-      <h3>🔒 Conexión segura</h3>
-      <p>Tu información está protegida con cifrado SSL de nivel bancario.</p>
+  <section class="confianza" style="padding-left: 5px;">
+    <h2>Tu seguridad es nuestra prioridad</h2>
+    <div class="confianza-contenedor">
+      <div class="confianza-item">
+        <h3>🔒 Conexión segura</h3>
+        <p>Tu información está protegida con cifrado SSL de nivel bancario.</p>
+      </div>
+      <div class="confianza-item">
+        <h3>💳 Pagos protegidos</h3>
+        <p>Procesamos tus pagos con Stripe, líder mundial en seguridad financiera.</p>
+      </div>
+      <div class="confianza-item">
+        <h3>🗣️ Soporte en español e inglés</h3>
+        <p>Estamos aquí para ayudarte antes, durante y después de tu viaje, en el idioma que prefieras.</p>
+      </div>
     </div>
-    <div class="confianza-item">
-      <h3>💳 Pagos protegidos</h3>
-      <p>Procesamos tus pagos con Stripe, líder mundial en seguridad financiera.</p>
-    </div>
-    <div class="confianza-item">
-      <h3>🗣️ Soporte en español e inglés</h3>
-      <p>Estamos aquí para ayudarte antes, durante y después de tu viaje, en el idioma que prefieras.</p>
-    </div>
-  </div>
-</section>
+  </section>
 
   <!-- Formulario de contacto -->
   <section class="contacto" style="padding-left: 5px;">
-  <h2 style="font-size: 1.8rem; margin-bottom: 10px;">📬 <strong>Contáctanos</strong></h2>
-  <p style="margin-bottom: 20px;">¿Tienes dudas, sugerencias o necesitas ayuda? <strong>Estamos aquí para ti.</strong></p>
-
-  <form id="form-contacto" style="max-width: 600px;">
-    <label for="nombre" style="font-weight: 600;">👤 Nombre completo</label>
-    <input type="text" id="nombre" name="nombre" required style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 8px; border: 1px solid #ccc;" />
-
-    <label for="email" style="font-weight: 600;">📧 Correo electrónico</label>
-    <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 8px; border: 1px solid #ccc;" />
-
-    <label for="mensaje" style="font-weight: 600;">💬 Tu mensaje</label>
-    <textarea id="mensaje" name="mensaje" rows="4" required style="width: 100%; padding: 10px; margin-bottom: 20px; border-radius: 8px; border: 1px solid #ccc;"></textarea>
-
-    <button type="submit" style="background-color: #d60000; color: white; padding: 12px 24px; border: none; border-radius: 25px; font-weight: bold; cursor: pointer;">📨 Enviar mensaje</button>
-  </form>
-</section>
+    <h2 style="font-size: 1.8rem; margin-bottom: 10px;">📬 <strong>Contáctanos</strong></h2>
+    <p style="margin-bottom: 20px;">¿Tienes dudas, sugerencias o necesitas ayuda? <strong>Estamos aquí para ti.</strong></p>
+    <form id="form-contacto" style="max-width: 600px;">
+      <label for="nombre" style="font-weight: 600;">👤 Nombre completo</label>
+      <input type="text" id="nombre" name="nombre" required style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 8px; border: 1px solid #ccc;" />
+      <label for="email" style="font-weight: 600;">📧 Correo electrónico</label>
+      <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 8px; border: 1px solid #ccc;" />
+      <label for="mensaje" style="font-weight: 600;">💬 Tu mensaje</label>
+      <textarea id="mensaje" name="mensaje" rows="4" required style="width: 100%; padding: 10px; margin-bottom: 20px; border-radius: 8px; border: 1px solid #ccc;"></textarea>
+      <button type="submit" style="background-color: #d60000; color: white; padding: 12px 24px; border: none; border-radius: 25px; font-weight: bold; cursor: pointer;">📨 Enviar mensaje</button>
+    </form>
+  </section>
 
   <!-- Footer -->
   <footer style="padding-left: 5px;">
@@ -139,17 +118,3 @@
       <h4>Aviso Legal</h4>
       <p>Arellano Travel es una marca operada por MAGServices...</p>
       <h4>Política de Privacidad</h4>
-      <p>No compartimos datos personales con terceros...</p>
-      <h4>Contacto</h4>
-      <p>Para consultas legales o de privacidad, escríbenos a <a href="mailto:legal@arellanotravel.com">legal@arellanotravel.com</a></p>
-    </div>
-  </footer>
-
-  <!-- Oferta destacada -->
-  <section class="oferta-destacada" style="padding-left: 5px;">
-    <div class="oferta-card">
-      <h2>✈️ Madrid → Bogotá</h2>
-      <p><strong>Precio:</strong> €420</p>
-      <p><strong>Duración:</strong> 10h 30min</p>
-      <p><strong>Transporte:</strong> Vuelo directo con Iberia</p>
-      <a href="https://tusitio.com/reserva?oferta
