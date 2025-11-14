@@ -207,3 +207,13 @@ nav.nav-logo-restaurado {
   width: 50px;
   margin-bottom: 10px;
 }
+#idioma {
+  background-color: white;
+  color: #d60000;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+#idioma:hover {
+  background-color: #f2f2f2;
+}
