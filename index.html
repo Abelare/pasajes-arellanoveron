@@ -9,7 +9,7 @@
 </head>
 <body>
 
-  <!-- Encabezado pegado arriba y más compacto -->
+ <!-- Encabezado pegado arriba y más compacto -->
 <nav class="nav-logo-restaurado">
   <div class="nav-container">
     <img src="img/logo.png" alt="Logo Arellano Travel" class="logo" />
@@ -20,7 +20,20 @@
       <li><a href="#">Ferris</a></li>
     </ul>
     <div class="user-options">
-      <span class="idioma">ES | EUR</span>
+      <!-- Selector de idiomas -->
+      <label for="idioma" style="color: white; font-weight: 600; margin-right: 5px;">Idioma:</label>
+      <select id="idioma" name="idioma" style="padding: 6px; border-radius: 5px; border: none; font-weight: 600;">
+        <option value="es">Español</option>
+        <option value="en">English</option>
+        <option value="fr">Français</option>
+        <option value="de">Deutsch</option>
+        <option value="it">Italiano</option>
+        <option value="pt">Português</option>
+        <option value="zh">中文 (Chinese)</option>
+        <option value="ja">日本語 (Japanese)</option>
+        <option value="ru">Русский (Russian)</option>
+        <option value="ar">العربية (Arabic)</option>
+      </select>
       <a href="#" class="btn-sesion">Iniciar sesión</a>
     </div>
   </div>
