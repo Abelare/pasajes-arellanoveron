@@ -108,17 +108,22 @@
 
   <!-- Formulario de contacto -->
   <section class="contacto" style="padding-left: 5px;">
-    <h2>Contáctanos</h2>
-    <form id="form-contacto">
-      <label for="nombre">Nombre</label>
-      <input type="text" id="nombre" name="nombre" required>
-      <label for="email">Correo electrónico</label>
-      <input type="email" id="email" name="email" required>
-      <label for="mensaje">Mensaje</label>
-      <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
-      <button type="submit">Enviar mensaje</button>
-    </form>
-  </section>
+  <h2 style="font-size: 1.8rem; margin-bottom: 10px;">📬 <strong>Contáctanos</strong></h2>
+  <p style="margin-bottom: 20px;">¿Tienes dudas, sugerencias o necesitas ayuda? <strong>Estamos aquí para ti.</strong></p>
+
+  <form id="form-contacto" style="max-width: 600px;">
+    <label for="nombre" style="font-weight: 600;">👤 Nombre completo</label>
+    <input type="text" id="nombre" name="nombre" required style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 8px; border: 1px solid #ccc;" />
+
+    <label for="email" style="font-weight: 600;">📧 Correo electrónico</label>
+    <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 8px; border: 1px solid #ccc;" />
+
+    <label for="mensaje" style="font-weight: 600;">💬 Tu mensaje</label>
+    <textarea id="mensaje" name="mensaje" rows="4" required style="width: 100%; padding: 10px; margin-bottom: 20px; border-radius: 8px; border: 1px solid #ccc;"></textarea>
+
+    <button type="submit" style="background-color: #d60000; color: white; padding: 12px 24px; border: none; border-radius: 25px; font-weight: bold; cursor: pointer;">📨 Enviar mensaje</button>
+  </form>
+</section>
 
   <!-- Footer -->
   <footer style="padding-left: 5px;">
