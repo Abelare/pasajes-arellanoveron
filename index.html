@@ -36,20 +36,36 @@
   </header>
 
   <!-- Buscador funcional -->
-  <section class="buscador-global" style="background-color: #d60000; color: white; padding: 20px 10px; text-align: center;">
-    <form id="formulario-global" style="max-width: 800px; margin: 0 auto;">
-      <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
-        <input type="text" placeholder="Desde: Ciudad, estación o aeropuerto" required style="flex: 1; padding: 10px; border-radius: 8px; border: none;" />
-        <input type="text" placeholder="A: Ciudad, estación o aeropuerto" required style="flex: 1; padding: 10px; border-radius: 8px; border: none;" />
-        <input type="date" required style="padding: 10px; border-radius: 8px; border: none;" />
-        <button type="submit" style="background-color: white; color: #d60000; padding: 10px 20px; border-radius: 25px; font-weight: bold; border: none; cursor: pointer;">🔍 Buscar</button>
-      </div>
-      <div style="margin-top: 15px;">
-        <label><input type="checkbox" /> Añadir vuelta</label>
-        <label style="margin-left: 15px;"><input type="checkbox" /> Sin tarjeta de descuento</label>
-      </div>
-    </form>
-  </section>
+  <!-- Buscador funcional pegado al hero -->
+<section class="buscador-global" style="
+  background-color: #d60000;
+  color: white;
+  padding: 10px 10px 20px 10px;
+  text-align: center;
+  margin-top: 0;
+">
+  <form id="formulario-global" style="max-width: 800px; margin: 0 auto;">
+    <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
+      <input type="text" placeholder="Desde: Ciudad, estación o aeropuerto" required style="flex: 1; padding: 10px; border-radius: 8px; border: none;" />
+      <input type="text" placeholder="A: Ciudad, estación o aeropuerto" required style="flex: 1; padding: 10px; border-radius: 8px; border: none;" />
+      <input type="date" required style="padding: 10px; border-radius: 8px; border: none;" />
+      <button type="submit" style="
+        background-color: white;
+        color: #d60000;
+        padding: 10px 20px;
+        border-radius: 25px;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+      ">🔍 Buscar</button>
+    </div>
+    <div style="margin-top: 10px;">
+      <label><input type="checkbox" /> Añadir vuelta</label>
+      <label style="margin-left: 15px;"><input type="checkbox" /> Sin tarjeta de descuento</label>
+    </div>
+  </form>
+</section>
+
 
   <!-- Resultados -->
   <section id="resultados"></section>
