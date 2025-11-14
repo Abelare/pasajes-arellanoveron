@@ -36,28 +36,38 @@
     </div>
   </header>
 
-  <!-- Buscador -->
-  <section class="buscador">
-    <form id="formulario">
-      <div class="form-row">
-        <input type="text" id="origen" placeholder="Lugar de origen" required />
-        <input type="text" id="destino" placeholder="Lugar de destino" required />
-        <input type="date" id="fecha" required />
-        <select id="tipo">
-          <option value="avion">Avión</option>
-          <option value="tren">Tren</option>
-          <option value="bus">Autobús</option>
-        </select>
-        <button type="submit" class="btn-buscar">Buscar</button>
-      </div>
-      <div class="form-options">
-        <label><input type="radio" name="viaje" value="ida" checked /> Solo ida</label>
-        <label><input type="radio" name="viaje" value="ida-vuelta" /> Ida y vuelta</label>
-        <label><input type="checkbox" id="directo" /> Solo directos</label>
-        <label><input type="checkbox" id="hotel" /> Añadir hotel</label>
-      </div>
-    </form>
-  </section>
+  <!-- Buscador global estilo Omio -->
+<section class="buscador-global" style="
+  background-color: #d60000;
+  color: white;
+  padding: 20px 10px;
+  text-align: center;
+">
+  <h2 style="font-size: 1.8rem; margin-bottom: 10px;">🌍 Viajes globales desde un único lugar</h2>
+  <p style="font-size: 1rem; margin-bottom: 20px;">Reserva billetes de tren, autobús, avión y ferry con total confianza</p>
+
+  <form id="formulario-global" style="max-width: 800px; margin: 0 auto;">
+    <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
+      <input type="text" placeholder="Desde: Ciudad, estación o aeropuerto" required style="flex: 1; padding: 10px; border-radius: 8px; border: none;" />
+      <input type="text" placeholder="A: Ciudad, estación o aeropuerto" required style="flex: 1; padding: 10px; border-radius: 8px; border: none;" />
+      <input type="date" required style="padding: 10px; border-radius: 8px; border: none;" />
+      <button type="submit" style="
+        background-color: white;
+        color: #d60000;
+        padding: 10px 20px;
+        border-radius: 25px;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+      ">🔍 Buscar</button>
+    </div>
+    <div style="margin-top: 15px;">
+      <label><input type="checkbox" /> Añadir vuelta</label>
+      <label style="margin-left: 15px;"><input type="checkbox" /> Sin tarjeta de descuento</label>
+    </div>
+  </form>
+</section>
+
 
   <!-- Resultados -->
   <section id="resultados"></section>
