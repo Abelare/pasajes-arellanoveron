@@ -18,15 +18,15 @@ nav.nav-logo-restaurado {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px 10px;
+  padding: 5px 10px;   /* mínimo padding interno */
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .logo {
-  height: 200px;
+  height: 150px;       /* reducido de 200px a 150px */
   width: auto;
-  max-width: 450px;
+  max-width: 350px;
   object-fit: contain;
   margin: 0;
   padding: 0;
@@ -62,7 +62,7 @@ nav.nav-logo-restaurado {
 .btn-sesion {
   background-color: white;
   color: #d60000;
-  padding: 8px 16px;
+  padding: 6px 12px;   /* más compacto */
   border-radius: 20px;
   font-weight: bold;
   text-decoration: none;
@@ -78,7 +78,7 @@ nav.nav-logo-restaurado {
   background-color: #d60000;
   color: white;
   text-align: center;
-  padding: 4px 10px;
+  padding: 2px 10px;   /* reducido al mínimo */
   margin: 0;
 }
 
