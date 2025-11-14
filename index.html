@@ -132,4 +132,134 @@
       <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 8px; border: 1px solid #ccc;" />
       <label id="contacto-mensaje-label" for="mensaje" style="font-weight: 600;">💬 Tu mensaje</label>
       <textarea id="mensaje" name="mensaje" rows="4" required style="width: 100%; padding: 10px; margin-bottom: 20px; border-radius: 8px; border: 1px solid #ccc;"></textarea>
-      <button id="contact
+      <button id="contact 
+
+        <!-- Formulario de contacto -->
+<section class="contacto" style="padding-left: 5px;">
+  <h2 id="contacto-titulo" style="font-size: 1.8rem; margin-bottom: 10px;">📬 <strong>Contáctanos</strong></h2>
+  <p id="contacto-texto" style="margin-bottom: 20px;">¿Tienes dudas, sugerencias o necesitas ayuda? <strong>Estamos aquí para ti.</strong></p>
+  <form id="form-contacto" style="max-width: 600px; margin: 0 auto;">
+    <label id="contacto-nombre-label" for="nombre" style="font-weight: 600;">👤 Nombre completo</label>
+    <input type="text" id="nombre" name="nombre" required style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 8px; border: 1px solid #ccc;" />
+    
+    <label id="contacto-email-label" for="email" style="font-weight: 600;">📧 Correo electrónico</label>
+    <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 8px; border: 1px solid #ccc;" />
+    
+    <label id="contacto-mensaje-label" for="mensaje" style="font-weight: 600;">💬 Tu mensaje</label>
+    <textarea id="mensaje" name="mensaje" rows="4" required style="width: 100%; padding: 10px; margin-bottom: 20px; border-radius: 8px; border: 1px solid #ccc;"></textarea>
+    
+    <button id="contacto-boton" type="submit" style="background-color: #d60000; color: white; padding: 12px 24px; border: none; border-radius: 25px; font-weight: bold; cursor: pointer;">📨 Enviar mensaje</button>
+  </form>
+</section>
+
+<!-- Footer -->
+<footer style="padding-left: 5px; text-align: center; margin-top: 40px;">
+  <p id="footer-derechos">&copy; 2025 Arellano Travel. Todos los derechos reservados.</p>
+  <p><a id="footer-aviso" href="#">Aviso legal</a> | <a id="footer-privacidad" href="#">Política de privacidad</a></p>
+  <div class="legal" style="max-width: 600px; margin: 0 auto;">
+    <h4 id="footer-aviso-titulo">Aviso Legal</h4>
+    <p id="footer-aviso-texto">Arellano Travel es una marca operada por MAGServices...</p>
+    <h4 id="footer-privacidad-titulo">Política de Privacidad</h4>
+    <p id="footer-privacidad-texto">Tu información está protegida y nunca será compartida sin tu consentimiento.</p>
+  </div>
+</footer>
+
+<!-- Script de traducción automática -->
+<script>
+const traducciones = {
+  es: {
+    titulo: "Reserva tu billete a cualquier parte del mundo",
+    subtitulo: "Reserva billetes de tren, autobús, avión y ferry con total confianza",
+    "nav-trenes": "Trenes",
+    "nav-autobuses": "Autobuses",
+    "nav-vuelos": "Vuelos",
+    "nav-ferris": "Ferris",
+    "btn-sesion": "Iniciar sesión",
+    "label-vuelta": "Añadir vuelta",
+    "label-descuento": "Sin tarjeta de descuento",
+    "resultado-titulo": "Madrid → Bogotá",
+    "resultado-precio": "Precio: €420",
+    "resultado-duracion": "Duración: 10h 30min",
+    "resultado-transporte": "Transporte: ✈️",
+    "resultado-boton": "Ver oferta Bogotá",
+    "reserva-titulo": "¿Listo para explorar el mundo?",
+    "reserva-texto": "Con atención personalizada, soporte en español y garantía de viaje seguro.",
+    "reserva-boton": "✈️ Explora destinos globales",
+    "faq-titulo": "Preguntas frecuentes",
+    "confianza-titulo": "Tu seguridad es nuestra prioridad",
+    "confianza-segura": "🔒 Conexión segura",
+    "confianza-segura-texto": "Tu información está protegida con cifrado SSL de nivel bancario.",
+    "confianza-pagos": "💳 Pagos protegidos",
+    "confianza-pagos-texto": "Procesamos tus pagos con Stripe, líder mundial en seguridad financiera.",
+    "confianza-soporte": "🗣️ Soporte en español e inglés",
+    "confianza-soporte-texto": "Estamos aquí para ayudarte antes, durante y después de tu viaje, en el idioma que prefieras.",
+    "contacto-titulo": "📬 Contáctanos",
+    "contacto-texto": "¿Tienes dudas, sugerencias o necesitas ayuda? Estamos aquí para ti.",
+    "contacto-nombre-label": "👤 Nombre completo",
+    "contacto-email-label": "📧 Correo electrónico",
+    "contacto-mensaje-label": "💬 Tu mensaje",
+    "contacto-boton": "📨 Enviar mensaje",
+    "footer-derechos": "© 2025 Arellano Travel. Todos los derechos reservados.",
+    "footer-aviso": "Aviso legal",
+    "footer-privacidad": "Política de privacidad",
+    "footer-aviso-titulo": "Aviso Legal",
+    "footer-aviso-texto": "Arellano Travel es una marca operada por MAGServices...",
+    "footer-privacidad-titulo": "Política de Privacidad",
+    "footer-privacidad-texto": "Tu información está protegida y nunca será compartida sin tu consentimiento."
+  },
+  en: {
+    titulo: "Book your ticket to anywhere in the world",
+    subtitulo: "Book train, bus, plane and ferry tickets with total confidence",
+    "nav-trenes": "Trains",
+    "nav-autobuses": "Buses",
+    "nav-vuelos": "Flights",
+    "nav-ferris": "Ferries",
+    "btn-sesion": "Log in",
+    "label-vuelta": "Add return",
+    "label-descuento": "No discount card",
+    "resultado-titulo": "Madrid → Bogotá",
+    "resultado-precio": "Price: €420",
+    "resultado-duracion": "Duration: 10h 30min",
+    "resultado-transporte": "Transport: ✈️",
+    "resultado-boton": "View Bogotá offer",
+    "reserva-titulo": "Ready to explore the world?",
+    "reserva-texto": "Personalized support, Spanish assistance and travel guarantee.",
+    "reserva-boton": "✈️ Explore global destinations",
+    "faq-titulo": "Frequently Asked Questions",
+    "confianza-titulo": "Your safety is our priority",
+    "confianza-segura": "🔒 Secure connection",
+    "confianza-segura-texto": "Your data is protected with bank-level SSL encryption.",
+    "confianza-pagos": "💳 Protected payments",
+    "confianza-pagos-texto": "We process payments with Stripe, global leader in financial security.",
+    "confianza-soporte": "🗣️ Support in Spanish and English",
+    "confianza-soporte-texto": "We're here to help before, during and after your trip, in your preferred language.",
+    "contacto-titulo": "📬 Contact us",
+    "contacto-texto": "Questions, suggestions or need help? We're here for you.",
+    "contacto-nombre-label": "👤 Full name",
+    "contacto-email-label": "📧 Email address",
+    "contacto-mensaje-label": "💬 Your message",
+    "contacto-boton": "📨 Send message",
+    "footer-derechos": "© 2025 Arellano Travel. All rights reserved.",
+    "footer-aviso": "Legal notice",
+    "footer-privacidad": "Privacy policy",
+    "footer-aviso-titulo": "Legal Notice",
+    "footer-aviso-texto": "Arellano Travel is a brand operated by MAGServices...",
+    "footer-privacidad-titulo": "Privacy Policy",
+    "footer-privacidad-texto": "Your data is protected and will never be shared without your consent."
+  }
+  // Puedes añadir más idiomas aquí
+};
+
+document.getElementById("idioma").addEventListener("change", function () {
+  const idioma = this.value;
+  const textos = traducciones[idioma];
+  for (const id in textos) {
+    const el = document.getElementById(id);
+    if (el) el.textContent = textos[id];
+  }
+});
+</script>
+
+</body>
+</html>
+
