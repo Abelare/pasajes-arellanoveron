@@ -57,7 +57,22 @@ document.getElementById("formulario").addEventListener("submit", function (e) {
     </div>
   `).join("");
 
-  document.getElementById("resultados").innerHTML = html;
+  // Mapa de ruta entre origen y destino
+  const mapa = `
+    <div class="mapa-vuelo" style="margin-top: 20px;">
+      <iframe
+        width="100%"
+        height="300"
+        style="border-radius: 10px;"
+        loading="lazy"
+        allowfullscreen
+        referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps/embed/v1/directions?key=TU_API_KEY&origin=${encodeURIComponent(origen)}&destination=${encodeURIComponent(destino)}&mode=flight">
+      </iframe>
+    </div>
+  `;
+
+  document.getElementById("resultados").innerHTML = html + mapa;
 });
 
 // Formulario de contacto
