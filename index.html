@@ -7,9 +7,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
 
- <!-- Encabezado pegado arriba y más compacto -->
+<body>
+<div class="site-wrapper">
+
+<!-- ================= NAV ================= -->
 <nav class="nav-logo-restaurado">
   <div class="nav-container">
     <img src="img/logo.png" alt="Logo Arellano Travel" class="logo" />
@@ -20,26 +22,17 @@
       <li><a id="nav-ferris" href="#">Ferris</a></li>
     </ul>
     <div class="user-options">
-      <!-- Selector de idiomas -->
-      <label for="idioma" style="color: white; font-weight: 600; margin-right: 5px;">Idioma:</label>
-      <select id="idioma" name="idioma" style="padding: 6px; border-radius: 5px; border: none; font-weight: 600;">
+      <label for="idioma">Idioma:</label>
+      <select id="idioma">
         <option value="es">Español</option>
         <option value="en">English</option>
-        <option value="fr">Français</option>
-        <option value="de">Deutsch</option>
-        <option value="it">Italiano</option>
-        <option value="pt">Português</option>
-        <option value="zh">中文</option>
-        <option value="ja">日本語</option>
-        <option value="ru">Русский</option>
-        <option value="ar">العربية</option>
       </select>
       <a id="btn-sesion" href="#" class="btn-sesion">Iniciar sesión</a>
     </div>
   </div>
 </nav>
 
-<!-- Hero súper compacto -->
+<!-- ================= HERO ================= -->
 <header class="hero">
   <div class="hero-content">
     <h1 id="titulo">Encuentra pasajes baratos en minutos</h1>
@@ -47,354 +40,108 @@
   </div>
 </header>
 
-  <!-- Buscador funcional pegado al hero -->
-<section class="buscador-global" style="
-  background-color: #d60000;
-  color: white;
-  padding: 10px 10px 20px 10px;
-  text-align: center;
-  margin-top: 0;
-">
-  <form id="formulario-global" style="max-width: 800px; margin: 0 auto;">
-    <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
-      <input type="text" id="buscador-desde" placeholder="Desde: Ciudad, estación o aeropuerto" required style="flex: 1; padding: 10px; border-radius: 8px; border: none;" />
-      <input type="text" id="buscador-hasta" placeholder="A: Ciudad, estación o aeropuerto" required style="flex: 1; padding: 10px; border-radius: 8px; border: none;" />
-      <input type="date" id="buscador-fecha" required style="padding: 10px; border-radius: 8px; border: none;" />
-      <button id="btn-buscar" type="submit" style="
-        background-color: white;
-        color: #d60000;
-        padding: 10px 20px;
-        border-radius: 25px;
-        font-weight: bold;
-        border: none;
-        cursor: pointer;
-      ">🔍 Buscar</button>
-    </div>
-    <div style="margin-top: 10px;">
-      <label id="label-vuelta"><input type="checkbox" /> Añadir vuelta</label>
-      <label id="label-descuento" style="margin-left: 15px;"><input type="checkbox" /> Sin tarjeta de descuento</label>
+<!-- ================= BUSCADOR ================= -->
+<section class="buscador-global">
+  <form id="formulario-global">
+    <div class="form-row">
+      <input type="text" placeholder="Desde" required />
+      <input type="text" placeholder="Hasta" required />
+      <input type="date" required />
+      <button type="submit">🔍 Buscar</button>
     </div>
   </form>
 </section>
 
-<!-- Destinos populares -->
-  
-<section class="destinos-populares" style="padding: 40px 20px; text-align: center;">
-  <h2 id="destinos-titulo" style="font-size: 2rem; margin-bottom: 20px;">Destinos populares</h2>
-  <p id="destinos-subtitulo" style="font-size: 1.1rem; margin-bottom: 30px;">
-    Elige entre trenes, autobuses, vuelos y ferris y reserva hoy mismo tu billete perfecto.
-  </p>
-  <div class="destinos-grid" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
-    <!-- Barcelona -->
-    <div class="destino-card" style="width: 200px; background-color: #fff; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); overflow: hidden;">
-      <img src="img/barcelona.jpg" alt="Barcelona" style="width: 100%; height: 120px; object-fit: cover;" />
-      <div style="padding: 10px;">
-        <h3 id="destino-barcelona">Barcelona</h3>
-        <p id="precio-barcelona">Desde 2€</p>
-      </div>
-    </div>
-    <!-- Sevilla -->
-    <div class="destino-card">
-      <img src="img/sevilla.jpg" alt="Sevilla" style="width: 100%; height: 120px; object-fit: cover;" />
-      <div><h3 id="destino-sevilla">Sevilla</h3><p id="precio-sevilla">Desde 11€</p></div>
-    </div>
-    <!-- Valencia -->
-    <div class="destino-card">
-      <img src="img/valencia.jpg" alt="Valencia" style="width: 100%; height: 120px; object-fit: cover;" />
-      <div><h3 id="destino-valencia">Valencia</h3><p id="precio-valencia">Desde 10€</p></div>
-    </div>
-    <!-- Málaga -->
-    <div class="destino-card">
-      <img src="img/malaga.jpg" alt="Málaga" style="width: 100%; height: 120px; object-fit: cover;" />
-      <div><h3 id="destino-malaga">Málaga</h3><p id="precio-malaga">Desde 7€</p></div>
-    </div>
-    <!-- Lisboa -->
-    <div class="destino-card">
-      <img src="img/lisboa.jpg" alt="Lisboa" style="width: 100%; height: 120px; object-fit: cover;" />
-      <div><h3 id="destino-lisboa">Lisboa</h3><p id="precio-lisboa">Desde 10€</p></div>
-    </div>
-    <!-- Granada -->
-    <div class="destino-card">
-      <img src="img/granada.jpg" alt="Granada" style="width: 100%; height: 120px; object-fit: cover;" />
-      <div><h3 id="destino-granada">Granada</h3><p id="precio-granada">Desde 23€</p></div>
-    </div>
-    <!-- París -->
-    <div class="destino-card">
-      <img src="img/paris.jpg" alt="París" style="width: 100%; height: 120px; object-fit: cover;" />
-      <div><h3 id="destino-paris">París</h3><p id="precio-paris">Desde 32€</p></div>
-    </div>
-    <!-- Toledo -->
-    <div class="destino-card">
-      <img src="img/toledo.jpg" alt="Toledo" style="width: 100%; height: 120px; object-fit: cover;" />
-      <div><h3 id="destino-toledo">Toledo</h3><p id="precio-toledo">Desde 7€</p></div>
-    </div>
+<!-- ================= DESTINOS ================= -->
+<section class="destinos-populares">
+  <h2>Destinos populares</h2>
+  <div class="destinos-grid">
+    <div class="destino-card"><img src="img/barcelona.jpg"><h3>Barcelona</h3><p>Desde 2€</p></div>
+    <div class="destino-card"><img src="img/sevilla.jpg"><h3>Sevilla</h3><p>Desde 11€</p></div>
+    <div class="destino-card"><img src="img/valencia.jpg"><h3>Valencia</h3><p>Desde 10€</p></div>
+    <div class="destino-card"><img src="img/malaga.jpg"><h3>Málaga</h3><p>Desde 7€</p></div>
   </div>
 </section>
 
-  <!-- Resultados -->
-  <section id="resultados"></section>
-  <section class="resultado" style="padding-left: 5px;">
-    <h3 id="resultado-titulo">Madrid → Bogotá</h3>
-    <p id="resultado-precio">Precio: €420</p>
-    <p id="resultado-duracion">Duración: 10h 30min</p>
-    <p id="resultado-transporte">Transporte: ✈️</p>
-    <a id="resultado-boton" href="https://tusitio.com/reserva?oferta=12345&origen=MAD&destino=BOG&fecha=2025-11-10" class="btn-reserva">Ver oferta Bogotá</a>
-  </section>
-  <div class="resultado-vuelo">
-  <div class="info-vuelo">
-    <h3>✈️ Aeropuerto de Madrid Barajas → Aeropuerto Fiumicino Roma</h3>
-    <div class="opciones-vuelo">
-      <div class="opcion">
-        <strong>Wizz Air</strong><br />
-        Salida: 22:25 · Llegada: 00:55<br />
-        Duración: 2h 30min · Precio: 101 €
-      </div>
-      <div class="opcion">
-        <strong>Ryanair</strong><br />
-        Salida: 06:25 · Llegada: 08:45<br />
-        Duración: 2h 20min · Precio: 151 €
-      </div>
-    </div>
+<!-- ================= BENEFICIOS ================= -->
+<section class="beneficios-rapidos">
+  <div class="beneficios-container">
+    <div><strong>📍 50+ destinos</strong><span>Europa y América</span></div>
+    <div><strong>💬 WhatsApp</strong><span>Atención directa</span></div>
+    <div><strong>🔒 Pagos seguros</strong><span>Stripe & PayPal</span></div>
+    <div><strong>🎫 Desde 2€</strong><span>Ofertas reales</span></div>
   </div>
-  <div class="mapa-vuelo">
-    <iframe
-      width="100%"
-      height="300"
-      style="border-radius: 10px;"
-      loading="lazy"
-      allowfullscreen
-      referrerpolicy="no-referrer-when-downgrade"
-      src="https://www.google.com/maps/embed/v1/directions?key=TU_API_KEY&origin=Madrid+Barajas+Airport&destination=Rome+Fiumicino+Airport&mode=flight">
-    </iframe>
+</section>
+
+<!-- ================= TESTIMONIOS ================= -->
+<section class="testimonios">
+  <h2>🗣️ Lo que dicen nuestros viajeros</h2>
+  <div class="testimonios-grid">
+    <div class="testimonio">“Excelente atención y precios.”<br><strong>Laura G.</strong></div>
+    <div class="testimonio">“Me ayudaron por WhatsApp.”<br><strong>Carlos M.</strong></div>
   </div>
-</div>
+</section>
 
-  <!-- Sección de reserva -->
-  <section class="reserva" style="padding-left: 5px;">
-    <h2 id="reserva-titulo">¿Listo para explorar el mundo?</h2>
-    <p id="reserva-texto">Con atención personalizada, soporte en español y garantía de viaje seguro.</p>
-    <a id="reserva-boton" href="https://links.duffel.com?token=..." target="_blank" class="btn-duffel">✈️ Explora destinos globales</a>
-  </section>
-
-  <!-- Preguntas frecuentes -->
-  <section class="faq" style="padding-left: 5px;">
-    <h2 id="faq-titulo">Preguntas frecuentes</h2>
-    <div class="faq-contenedor">
-      <!-- Aquí van los <details> como los tenías -->
-    </div>
-  </section>
-
-  <!-- Confianza y seguridad -->
-  <section class="confianza" style="padding-left: 5px;">
-    <h2 id="confianza-titulo">Tu seguridad es nuestra prioridad</h2>
-    <div class="confianza-contenedor">
-      <div class="confianza-item">
-        <h3 id="confianza-segura">🔒 Conexión segura</h3>
-        <p id="confianza-segura-texto">Tu información está protegida con cifrado SSL de nivel bancario.</p>
-      </div>
-      <div class="confianza-item">
-        <h3 id="confianza-pagos">💳 Pagos protegidos</h3>
-        <p id="confianza-pagos-texto">Procesamos tus pagos con Stripe, líder mundial en seguridad financiera.</p>
-      </div>
-      <div class="confianza-item">
-        <h3 id="confianza-soporte">🗣️ Soporte en español e inglés</h3>
-        <p id="confianza-soporte-texto">Estamos aquí para ayudarte antes, durante y después de tu viaje, en el idioma que prefieras.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Formulario de contacto -->
-  <section class="contacto" style="padding-left: 5px;">
-    <h2 id="contacto-titulo" style="font-size: 1.8rem; margin-bottom: 10px;">📬 <strong>Contáctanos</strong></h2>
-    <p id="contacto-texto" style="margin-bottom: 20px;">¿Tienes dudas, sugerencias o necesitas ayuda? <strong>Estamos aquí para ti.</strong></p>
-    <form id="form-contacto" style="max-width: 600px;">
-      <label id="contacto-nombre-label" for="nombre" style="font-weight: 600;">👤 Nombre completo</label>
-      <input type="text" id="nombre" name="nombre" required style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 8px; border: 1px solid #ccc;" />
-      <label id="contacto-email-label" for="email" style="font-weight: 600;">📧 Correo electrónico</label>
-      <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 8px; border: 1px solid #ccc;" />
-      <label id="contacto-mensaje-label" for="mensaje" style="font-weight: 600;">💬 Tu mensaje</label>
-      <textarea id="mensaje" name="mensaje" rows="4" required style="width: 100%; padding: 10px; margin-bottom: 20px; border-radius: 8px; border: 1px solid #ccc;"></textarea>
-      <button id="contact 
-
-        <!-- Formulario de contacto -->
-<section class="contacto" style="padding-left: 5px;">
-  <h2 id="contacto-titulo" style="font-size: 1.8rem; margin-bottom: 10px;">📬 <strong>Contáctanos</strong></h2>
-  <p id="contacto-texto" style="margin-bottom: 20px;">¿Tienes dudas, sugerencias o necesitas ayuda? <strong>Estamos aquí para ti.</strong></p>
-  <form id="form-contacto" style="max-width: 600px; margin: 0 auto;">
-    <label id="contacto-nombre-label" for="nombre" style="font-weight: 600;">👤 Nombre completo</label>
-    <input type="text" id="nombre" name="nombre" required style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 8px; border: 1px solid #ccc;" />
-    
-    <label id="contacto-email-label" for="email" style="font-weight: 600;">📧 Correo electrónico</label>
-    <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 8px; border: 1px solid #ccc;" />
-    
-    <label id="contacto-mensaje-label" for="mensaje" style="font-weight: 600;">💬 Tu mensaje</label>
-    <textarea id="mensaje" name="mensaje" rows="4" required style="width: 100%; padding: 10px; margin-bottom: 20px; border-radius: 8px; border: 1px solid #ccc;"></textarea>
-    
-    <button id="contacto-boton" type="submit" style="background-color: #d60000; color: white; padding: 12px 24px; border: none; border-radius: 25px; font-weight: bold; cursor: pointer;">📨 Enviar mensaje</button>
+<!-- ================= CONTACTO ================= -->
+<section class="contacto">
+  <h2 id="contacto-titulo">📬 Contáctanos</h2>
+  <form id="form-contacto">
+    <input type="text" placeholder="Nombre completo" required />
+    <input type="email" placeholder="Correo electrónico" required />
+    <textarea rows="4" placeholder="Tu mensaje" required></textarea>
+    <button type="submit">📨 Enviar mensaje</button>
   </form>
 </section>
 
-<!-- Footer -->
-<footer style="padding-left: 5px; text-align: center; margin-top: 40px;">
-  <p id="footer-derechos">&copy; 2025 Arellano Travel. Todos los derechos reservados.</p>
-  <p><a id="footer-aviso" href="#">Aviso legal</a> | <a id="footer-privacidad" href="#">Política de privacidad</a></p>
-  <div class="legal" style="max-width: 600px; margin: 0 auto;">
-    <h4 id="footer-aviso-titulo">Aviso Legal</h4>
-    <p id="footer-aviso-texto">Arellano Travel es una marca operada por MAGServices...</p>
-    <h4 id="footer-privacidad-titulo">Política de Privacidad</h4>
-    <p id="footer-privacidad-texto">Tu información está protegida y nunca será compartida sin tu consentimiento.</p>
-  </div>
+<!-- ================= FOOTER ================= -->
+<footer>
+  <p>© 2025 Arellano Travel. Todos los derechos reservados.</p>
 </footer>
 
-<!-- Script de traducción automática -->
-<script>
+</div>
+
+<!-- ================= WHATSAPP ================= -->
+<a href="https://wa.me/34652858125?text=Hola,%20quiero%20consultar%20por%20pasajes%20y%20viajes."
+   class="whatsapp-float"
+   target="_blank">💬</a>
+
+  <script>
 const traducciones = {
   es: {
-    titulo: "Reserva tu billete a cualquier parte del mundo",
+    titulo: "Encuentra pasajes baratos en minutos",
     subtitulo: "Reserva billetes de tren, autobús, avión y ferry con total confianza",
     "nav-trenes": "Trenes",
     "nav-autobuses": "Autobuses",
     "nav-vuelos": "Vuelos",
     "nav-ferris": "Ferris",
     "btn-sesion": "Iniciar sesión",
-    "label-vuelta": "Añadir vuelta",
-    "label-descuento": "Sin tarjeta de descuento",
-    "resultado-titulo": "Madrid → Bogotá",
-    "resultado-precio": "Precio: €420",
-    "resultado-duracion": "Duración: 10h 30min",
-    "resultado-transporte": "Transporte: ✈️",
-    "resultado-boton": "Ver oferta Bogotá",
-    "reserva-titulo": "¿Listo para explorar el mundo?",
-    "reserva-texto": "Con atención personalizada, soporte en español y garantía de viaje seguro.",
-    "reserva-boton": "✈️ Explora destinos globales",
-    "faq-titulo": "Preguntas frecuentes",
-    "confianza-titulo": "Tu seguridad es nuestra prioridad",
-    "confianza-segura": "🔒 Conexión segura",
-    "confianza-segura-texto": "Tu información está protegida con cifrado SSL de nivel bancario.",
-    "confianza-pagos": "💳 Pagos protegidos",
-    "confianza-pagos-texto": "Procesamos tus pagos con Stripe, líder mundial en seguridad financiera.",
-    "confianza-soporte": "🗣️ Soporte en español e inglés",
-    "confianza-soporte-texto": "Estamos aquí para ayudarte antes, durante y después de tu viaje, en el idioma que prefieras.",
-    "contacto-titulo": "📬 Contáctanos",
-    "contacto-texto": "¿Tienes dudas, sugerencias o necesitas ayuda? Estamos aquí para ti.",
-    "contacto-nombre-label": "👤 Nombre completo",
-    "contacto-email-label": "📧 Correo electrónico",
-    "contacto-mensaje-label": "💬 Tu mensaje",
-    "contacto-boton": "📨 Enviar mensaje",
-    "footer-derechos": "© 2025 Arellano Travel. Todos los derechos reservados.",
-    "footer-aviso": "Aviso legal",
-    "footer-privacidad": "Política de privacidad",
-    "footer-aviso-titulo": "Aviso Legal",
-    "footer-aviso-texto": "Arellano Travel es una marca operada por MAGServices...",
-    "footer-privacidad-titulo": "Política de Privacidad",
-    "footer-privacidad-texto": "Tu información está protegida y nunca será compartida sin tu consentimiento."
+    "destinos-titulo": "Destinos populares",
+    "contacto-titulo": "📬 Contáctanos"
   },
   en: {
-    titulo: "Book your ticket to anywhere in the world",
-    subtitulo: "Book train, bus, plane and ferry tickets with total confidence",
+    titulo: "Find cheap tickets in minutes",
+    subtitulo: "Book train, bus, flight and ferry tickets with confidence",
     "nav-trenes": "Trains",
     "nav-autobuses": "Buses",
     "nav-vuelos": "Flights",
     "nav-ferris": "Ferries",
     "btn-sesion": "Log in",
-    "label-vuelta": "Add return",
-    "label-descuento": "No discount card",
-    "resultado-titulo": "Madrid → Bogotá",
-    "resultado-precio": "Price: €420",
-    "resultado-duracion": "Duration: 10h 30min",
-    "resultado-transporte": "Transport: ✈️",
-    "resultado-boton": "View Bogotá offer",
-    "reserva-titulo": "Ready to explore the world?",
-    "reserva-texto": "Personalized support, Spanish assistance and travel guarantee.",
-    "reserva-boton": "✈️ Explore global destinations",
-    "faq-titulo": "Frequently Asked Questions",
-    "confianza-titulo": "Your safety is our priority",
-    "confianza-segura": "🔒 Secure connection",
-    "confianza-segura-texto": "Your data is protected with bank-level SSL encryption.",
-    "confianza-pagos": "💳 Protected payments",
-    "confianza-pagos-texto": "We process payments with Stripe, global leader in financial security.",
-    "confianza-soporte": "🗣️ Support in Spanish and English",
-    "confianza-soporte-texto": "We're here to help before, during and after your trip, in your preferred language.",
-    "contacto-titulo": "📬 Contact us",
-    "contacto-texto": "Questions, suggestions or need help? We're here for you.",
-    "contacto-nombre-label": "👤 Full name",
-    "contacto-email-label": "📧 Email address",
-    "contacto-mensaje-label": "💬 Your message",
-    "contacto-boton": "📨 Send message",
-    "footer-derechos": "© 2025 Arellano Travel. All rights reserved.",
-    "footer-aviso": "Legal notice",
-    "footer-privacidad": "Privacy policy",
-    "footer-aviso-titulo": "Legal Notice",
-    "footer-aviso-texto": "Arellano Travel is a brand operated by MAGServices...",
-    "footer-privacidad-titulo": "Privacy Policy",
-    "footer-privacidad-texto": "Your data is protected and will never be shared without your consent."
+    "destinos-titulo": "Popular destinations",
+    "contacto-titulo": "📬 Contact us"
   }
-  // Puedes añadir más idiomas aquí
 };
 
 document.getElementById("idioma").addEventListener("change", function () {
   const idioma = this.value;
   const textos = traducciones[idioma];
+
   for (const id in textos) {
     const el = document.getElementById(id);
     if (el) el.textContent = textos[id];
   }
 });
 </script>
-        <!-- Botón flotante WhatsApp -->
-<a href="https://wa.me/34652858125?text=Hola,%20quiero%20consultar%20por%20pasajes%20y%20viajes.%0ADestino:%0AFecha%20de%20viaje:%0ANúmero%20de%20personas:%0APresupuesto%20aproximado:%0AComentarios:"
-   class="whatsapp-float"
-   target="_blank"
-   aria-label="WhatsApp Arellano Travel">
-   💬
-</a>
-
-      </div>
 
 </body>
-        <div class="site-wrapper">
-</body>
-<!-- Sección beneficios rápidos -->
-<section class="beneficios-rapidos">
-  <div class="beneficios-container">
-    <div>
-      <strong>📍 Más de 50 destinos</strong>
-      <span>España, Europa y América</span>
-    </div>
-    <div>
-      <strong>💬 Atención por WhatsApp</strong>
-      <span>Rápido y personalizado</span>
-    </div>
-    <div>
-      <strong>🔒 Pagos seguros</strong>
-      <span>Stripe y PayPal</span>
-    </div>
-    <div>
-      <strong>🎫 Pasajes desde 2 €</strong>
-      <span>Ofertas actualizadas</span>
-    </div>
-  </div>
-</section>
+</html>
 
-<!-- Testimonios -->
-<section class="testimonios">
-  <h2>🗣️ Lo que dicen nuestros viajeros</h2>
-  <div class="testimonios-grid">
-    <div class="testimonio">
-      <p>“Reservé mi vuelo a Paraguay en minutos. Atención excelente.”</p>
-      <strong>— Laura G., Madrid</strong>
-    </div>
-    <div class="testimonio">
-      <p>“Me ayudaron por WhatsApp a encontrar el mejor precio para Roma.”</p>
-      <strong>— Carlos M., Leganés</strong>
-    </div>
-  </div>
-</section>
-
-<!-- Botón flotante WhatsApp -->
-<a href="https://wa.me/34652858125?text=Hola,%20quiero%20consultar%20por%20pasajes%20y%20viajes.%0ADestino:%0AFecha%20de%20viaje:%0ANúmero%20de%20personas:%0APresupuesto%20aproximado:%0AComentarios:"
-   class="whatsapp-float"
-   target="_blank"
-   aria-label="WhatsApp Arellano Travel">
-   💬
-</a>
