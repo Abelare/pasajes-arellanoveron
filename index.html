@@ -354,30 +354,47 @@ document.getElementById("idioma").addEventListener("change", function () {
 </body>
         <div class="site-wrapper">
 </body>
-
-          <section class="beneficios-rápidos" style="background:#f9f9f9; padding:20px 0; text-align:center;">
-  <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:30px;">
-    <div><strong>📍 Más de 50 destinos</strong><br><span style="color:#555;">España, Europa y América</span></div>
-    <div><strong>💬 Atención por WhatsApp</strong><br><span style="color:#555;">Rápido y personalizado</span></div>
-    <div><strong>🔒 Pagos seguros</strong><br><span style="color:#555;">Stripe y PayPal disponibles</span></div>
-    <div><strong>🎫 Pasajes desde 2 €</strong><br><span style="color:#555;">Ofertas actualizadas cada semana</span></div>
+<!-- Sección beneficios rápidos -->
+<section class="beneficios-rapidos">
+  <div class="beneficios-container">
+    <div>
+      <strong>📍 Más de 50 destinos</strong>
+      <span>España, Europa y América</span>
+    </div>
+    <div>
+      <strong>💬 Atención por WhatsApp</strong>
+      <span>Rápido y personalizado</span>
+    </div>
+    <div>
+      <strong>🔒 Pagos seguros</strong>
+      <span>Stripe y PayPal</span>
+    </div>
+    <div>
+      <strong>🎫 Pasajes desde 2 €</strong>
+      <span>Ofertas actualizadas</span>
+    </div>
   </div>
 </section>
 
-</html>
-
-<section class="testimonios" style="padding:40px 20px; background:#fff;">
-  <h2 style="text-align:center;">🗣️ Lo que dicen nuestros viajeros</h2>
-  <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:20px; margin-top:20px;">
-    <div style="max-width:300px; background:#f1f1f1; padding:20px; border-radius:10px;">
+<!-- Testimonios -->
+<section class="testimonios">
+  <h2>🗣️ Lo que dicen nuestros viajeros</h2>
+  <div class="testimonios-grid">
+    <div class="testimonio">
       <p>“Reservé mi vuelo a Paraguay en minutos. Atención excelente.”</p>
       <strong>— Laura G., Madrid</strong>
     </div>
-    <div style="max-width:300px; background:#f1f1f1; padding:20px; border-radius:10px;">
-      <p>“Me ayudaron por WhatsApp a encontrar el mejor precio para mi viaje a Roma.”</p>
+    <div class="testimonio">
+      <p>“Me ayudaron por WhatsApp a encontrar el mejor precio para Roma.”</p>
       <strong>— Carlos M., Leganés</strong>
     </div>
   </div>
 </section>
 
-          </html>
+<!-- Botón flotante WhatsApp -->
+<a href="https://wa.me/34652858125?text=Hola,%20quiero%20consultar%20por%20pasajes%20y%20viajes.%0ADestino:%0AFecha%20de%20viaje:%0ANúmero%20de%20personas:%0APresupuesto%20aproximado:%0AComentarios:"
+   class="whatsapp-float"
+   target="_blank"
+   aria-label="WhatsApp Arellano Travel">
+   💬
+</a>
