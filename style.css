@@ -280,3 +280,20 @@ nav.nav-logo-restaurado {
   flex: 1;
   min-width: 300px;
 }
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: white;
+  font-size: 26px;
+  padding: 14px 18px;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  z-index: 9999;
+}
+.whatsapp-float:hover {
+  background-color: #1ebe5d;
+}
+
