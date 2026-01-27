@@ -296,4 +296,22 @@ nav.nav-logo-restaurado {
 .whatsapp-float:hover {
   background-color: #1ebe5d;
 }
+.site-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+.nav-container,
+.hero-content,
+.buscador-global form,
+.destinos-populares,
+.reserva,
+.faq,
+.confianza,
+.contacto,
+footer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 
